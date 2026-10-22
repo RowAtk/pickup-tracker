@@ -10,19 +10,29 @@ export type Vehicle = {
   drivetrain?: string;
   listingUrl?: string;
   imageUrl?: string;
+  imageCredit?: string;
   notes?: string;
   concerns?: string[];
   positives?: string[];
 };
 export const vehicles: Vehicle[] = [
-  { id: 'f150-2017', title: 'Ford F-150', year: 2017, priceJmd: 2800000, status: 'shortlist', notes: 'Previously reduced to J$2.8M. Verify listing status.' },
+  { id:'ranger-top-2019', title:'Ford Ranger 3.2 4WD', year:2019, priceJmd:4490000, mileageKm:51794, rank:1, status:'shortlist', drivetrain:'4WD', notes:'Historical top-ranked candidate; listing URL and current availability need verification.' },
+  { id:'l200-2022', title:'Mitsubishi L200 4WD', year:2022, priceJmd:4999000, mileageKm:70100, rank:2, status:'shortlist', drivetrain:'4WD', notes:'Historical ranked candidate; verify source.' },
+  { id: 'f150-2017', title: 'Ford F-150', year: 2017, priceJmd: 2800000, mileageKm: 98000, rank: 5, status: 'shortlist', notes: 'Previously reduced to J$2.8M. Verify listing status.' },
   { id: 'frontier-2023', title: 'Nissan Frontier 2.5 Diesel', year: 2023, priceJmd: 5500000, mileageKm: 54000, rank: 3, status: 'shortlist', drivetrain: '4WD', listingUrl: 'https://www.jacars.net/adv/2526654', notes: '2023 diesel 4WD candidate.', positives: ['Newer model year', 'Low reported mileage', '4WD'], concerns: ['Confirm service history and diesel system condition'] },
   { id: 'wildtrak-2021', title: 'Ford Ranger Wildtrak', year: 2021, priceJmd: 5700000, mileageKm: 58419, rank: 4, status: 'shortlist', listingUrl: 'https://www.jacars.net/adv/2528226', notes: 'Replaced the earlier 92,000 km Wildtrak.', positives: ['Lower mileage than previous Wildtrak listing'], concerns: ['Verify service history and condition'] },
+  { id:'wildtrak-2015', title:'Ford Ranger Wildtrak 3.2', year:2015, priceJmd:3300000, mileageKm:92437, rank:6, status:'shortlist', concerns:['Age and financing eligibility'] },
+  { id:'dmax-2015', title:'Isuzu D-Max 3.0', year:2015, priceJmd:3550000, mileageKm:78775, rank:7, status:'shortlist', concerns:['Age and financing eligibility'] },
+  { id:'wildtrak-2017', title:'Ford Ranger Wildtrak', year:2017, priceJmd:3830000, mileageKm:148000, rank:8, status:'shortlist', concerns:['Higher reported mileage'] },
   { id: 'frontier-midnight-2019', title: 'Nissan Frontier SV Midnight Edition', year: 2019, priceJmd: 3500000, mileageKm: 108000, rank: 9, status: 'shortlist' },
   { id: 'maxus-2026', title: 'MAXUS T60', year: 2026, priceJmd: 5000000, rank: 10, status: 'shortlist', transmission: 'Manual' },
   { id: 'ranger-kig-2020', title: 'Ford Ranger (KIG)', year: 2020, priceJmd: 5850000, status: 'watchlist', notes: 'Dealer says serviced by KIG; seller upgrading.' },
   { id: 'ranger-2014', title: 'Ford Ranger 3.2L', year: 2014, priceJmd: 2350000, status: 'watchlist', listingUrl: 'https://www.jacars.net/adv/2530247_ford-ranger-3-2l-2014/' },
   { id: 'ranger-2019', title: 'Ford Ranger', year: 2019, priceJmd: 4500000, status: 'watchlist', listingUrl: 'https://www.jacars.net/adv/2529943' },
   { id: 'hilux-2019', title: 'Toyota Hilux 2.4L', year: 2019, priceJmd: 0, status: 'watchlist', listingUrl: 'https://www.jacars.net/adv/2521675', notes: 'Local listing; price needs confirmation.' },
+  { id:'raptor-2020', title:'Ford Ranger Raptor 2.0', year:2020, priceJmd:0, status:'watchlist', notes:'Previously considered. Recover original listing and price.' },
+  { id:'wildtrak-2022', title:'Ford Ranger Wildtrak', year:2022, priceJmd:0, status:'watchlist', notes:'Previously considered; original listing to recover.' },
+  { id:'xlt-2022', title:'Ford Ranger XLT', year:2022, priceJmd:0, status:'watchlist', notes:'Previously considered; original listing to recover.' },
+  { id:'triton-2025', title:'Mitsubishi Triton L200', year:2025, priceJmd:0, status:'watchlist', notes:'Previously considered; original listing to recover.' },
   { id: 'l200-instagram', title: 'Mitsubishi L200 (modified)', year: 0, priceJmd: 0, status: 'watchlist', listingUrl: 'https://www.instagram.com/reel/DevUJOmR3-Y/', notes: 'Age, maintenance, and modifications require review. Price and year unverified.', concerns: ['Modification quality', 'Maintenance history', 'Age and parts condition'] }
 ];
