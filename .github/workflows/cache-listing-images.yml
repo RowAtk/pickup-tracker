@@ -1,10 +1,13 @@
 name: Cache listing photographs
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * 1'
   push:
     paths:
       - 'src/lib/data/vehicles.ts'
       - 'scripts/import_jacars_images.py'
+      - '.github/workflows/cache-listing-images.yml'
 permissions:
   contents: write
 jobs:
