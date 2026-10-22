@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Best-effort Jacars image importer; only saves images from their exact listing page."""
+"""Best-effort Jacars image importer; only saves images from their exact listing page.
+Runs on GitHub Actions; no user-side script execution is required.
+"""
 import json, re, time, urllib.request, urllib.parse, imghdr
 from html.parser import HTMLParser
 from pathlib import Path
