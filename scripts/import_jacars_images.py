@@ -92,7 +92,7 @@ def main():
     print(f"Found {len(records)} vehicles with URLs", flush=True)
     existing = {}
     if MANIFEST.exists():
-        for vid, path in re.findall(r"'([^']+)':\s*\{\s*cover:\s*'([^']+)'", MANIFEST.read_text()):
+        for vid, path in re.findall(r"""['"]([^'"]+)['"]:\\s*\\{\\s*cover:\\s*['"]([^'"]+)['"]""", MANIFEST.read_text()):
             if (ROOT / "static" / path.lstrip("/")).exists():
                 existing[vid] = path
     for vid, url in records:
