@@ -1,5 +1,6 @@
 <script lang="ts">
   import { vehicles } from '$lib/data/vehicles';
+  import { vehicleImages } from '$lib/data/vehicle-images';
   let view = $state<'all' | 'shortlist' | 'watchlist'>('all');
   let search = $state('');
   let sort = $state<'rank' | 'price' | 'year'>('rank');
@@ -26,7 +27,7 @@
     <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {#each visible as vehicle (vehicle.id)}
       <article class="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
-        <a href={`/vehicles/${vehicle.id}`} class="flex h-44 items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-950 text-zinc-600 hover:text-amber-400"><span class="text-sm uppercase tracking-[.2em]">View vehicle details →</span></a>
+        <a href={`/vehicles/${vehicle.id}`} class="flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-950 text-zinc-600 hover:text-amber-400">{#if vehicleImages[vehicle.id]?.cover}<img src={vehicleImages[vehicle.id].cover} alt={`${vehicle.year} ${vehicle.title}`} loading="lazy" class="h-full w-full object-cover" />{:else}<span class="text-sm uppercase tracking-[.2em]">Photo pending · View details →</span>{/if}</a>
         <div class="p-5"><div class="mb-3 flex items-center justify-between"><span class="rounded-md bg-zinc-800 px-2 py-1 text-xs uppercase text-zinc-300">{vehicle.status}</span>{#if vehicle.rank}<span class="text-sm font-semibold text-amber-400"># {vehicle.rank}</span>{/if}</div>
         <h2 class="text-xl font-bold"><a class="hover:text-amber-400" href={`/vehicles/${vehicle.id}`}>{vehicle.year || 'Year TBD'} {vehicle.title}</a></h2><p class="mt-2 text-2xl font-bold">{money(vehicle.priceJmd)}</p>
         <p class="mt-2 text-sm text-zinc-400">{vehicle.mileageKm ? vehicle.mileageKm.toLocaleString() + ' km' : 'Mileage TBD'} {vehicle.drivetrain ? ' · ' + vehicle.drivetrain : ''} {vehicle.transmission ? ' · ' + vehicle.transmission : ''}</p>
