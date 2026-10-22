@@ -19,7 +19,7 @@
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><div class="text-3xl font-bold">3%</div><div class="mt-1 text-sm text-zinc-400">Staff financing reference rate</div></div>
     </div>
     <div class="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      <div class="flex gap-2">{#each ['all','shortlist','watchlist'] as tab}<button onclick={() => view = tab as typeof view} class:!bg-amber-400={view===tab} class:!text-zinc-950={view===tab} class="rounded-lg bg-zinc-800 px-4 py-2 text-sm font-semibold capitalize text-zinc-300">{tab}</button>{/each}</div>
+      <div class="flex gap-2">{#each ['all','shortlist','watchlist'] as tab}<button onclick={() => view = tab as typeof view} class={`rounded-lg px-4 py-2 text-sm font-semibold capitalize ${view === tab ? "bg-amber-400 text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}>{tab}</button>{/each}</div>
       <div class="flex gap-2"><input aria-label="Search vehicles" placeholder="Search trucks..." bind:value={search} class="min-w-0 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm outline-none focus:border-amber-400" /><select aria-label="Sort vehicles" bind:value={sort} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="rank">Rank</option><option value="price">Lowest price</option><option value="year">Newest</option></select></div>
     </div>
     <p class="mt-5 text-xs text-zinc-500">Initial inventory is partial. Some previous ranks conflict and require reconciliation before publishing a definitive Top 10.</p>
