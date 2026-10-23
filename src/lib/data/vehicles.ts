@@ -9,6 +9,7 @@ export type Vehicle = {
   transmission?: string;
   drivetrain?: string;
   listingUrl?: string;
+  sourceKind?: 'listing' | 'dealer-catalogue';
   imageUrl?: string;
   imageCredit?: string;
   notes?: string;
@@ -25,7 +26,7 @@ export const vehicles: Vehicle[] = [
   { id:'dmax-2015', title:'Isuzu D-Max 3.0', year:2015, priceJmd:3550000, mileageKm:78775, rank:7, status:'shortlist', drivetrain:'4WD', listingUrl:'https://www.jacars.net/adv/2525441_isuzu-d-max/', concerns:['Age and financing eligibility'] , notes:'Exact 78,775 km, J$3.55M; seller claims service documentation and no accidents. Verify independently.' },
   { id:'wildtrak-2017', title:'Ford Ranger Wildtrak', year:2017, priceJmd:3830000, mileageKm:148000, rank:8, status:'shortlist', drivetrain:'4WD', listingUrl:'https://www.jacars.net/adv/2526738_ford-ranger-3-4l-2017/', concerns:['Higher reported mileage'] , notes:'J$3.83M Wildtrak listing. Jacars shows 0 km while earlier research recorded 148,000 km; verify actual odometer.' },
   { id: 'frontier-midnight-2019', title: 'Nissan Frontier SV Midnight Edition', year: 2019, priceJmd: 3500000, mileageKm: 108000, rank: 9, status: 'shortlist', listingUrl:'https://www.jacars.net/adv/2526109_2019-nissan-frontier/' , notes:'Confirmed same listing as 2526109: SV Limited Midnight Edition 4.0L petrol V6, left-hand drive, 108,000 km.' },
-  { id: 'maxus-2026', title: 'MAXUS T60', year: 2026, priceJmd: 5000000, rank: 10, status: 'shortlist', transmission: 'Manual' },
+  { id: 'maxus-2026', title: 'MAXUS T60', year: 2026, priceJmd: 5000000, rank: 10, status: 'shortlist', transmission: 'Manual', listingUrl:'https://www.chinawheelsja.com/maxus/inventory.html', sourceKind:'dealer-catalogue', notes:'China Wheels inventory lists the 2026 T60 manual at J$5M; this is a dealer catalogue, not a specific Jacars advert.' },
   { id: 'ranger-kig-2020', title: 'Ford Ranger (KIG)', year: 2020, priceJmd: 5850000, status: 'watchlist', notes: 'Dealer says serviced by KIG; seller upgrading.' },
   { id: 'ranger-2014', title: 'Ford Ranger 3.2L', year: 2014, priceJmd: 2350000, status: 'watchlist', listingUrl: 'https://www.jacars.net/adv/2530247_ford-ranger-3-2l-2014/' },
   { id: 'ranger-2019', title: 'Ford Ranger', year: 2019, priceJmd: 4500000, status: 'watchlist', listingUrl: 'https://www.jacars.net/adv/2529943' },
