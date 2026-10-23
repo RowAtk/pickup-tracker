@@ -38,3 +38,16 @@
 - Store verified files under static/vehicles/<id>/, then register paths in src/lib/data/vehicle-images.ts.
 - The web page uses local images only when present in the manifest; otherwise a placeholder remains.
 - Do not automatically assume an image extracted from a search result belongs to the exact listed vehicle.
+
+## Source-link reconciliation (2026-10-22)
+- Ranked #1 2019 Ranger 3.2 4WD, 51,794 km, J$4.49M: Jacars 2523078 (JusDrive).
+- Ranked #2 2022 L200 2.8 4WD, 70,100 km, J$4.999M: Jacars 2526875. Consolidated duplicate watchlist record `l200-2022-other`.
+- Ranked #5 2017 F-150, 98,000 km, J$2.8M: Jacars 2527778; left-hand-drive petrol.
+- Ranked #6 2015 Wildtrak 3.2, 92,437 km, J$3.3M: Jacars 2524288. **Ad explicitly expired** on 2026-10-22.
+- Ranked #7 2015 D-Max 3.0, 78,775 km, J$3.55M: Jacars 2525441.
+- Ranked #8 2017 Wildtrak, J$3.83M: Jacars 2526738; Jacars mileage says 0, earlier research says 148,000 km; verify.
+- Ranked #9 2019 Frontier SV Midnight, 108,000 km, J$3.5M: Jacars 2526109. Consolidated duplicate watchlist record `frontier-2019-other`.
+- Ranked #10 MAXUS T60 manual, J$5M: China Wheels dealer inventory https://www.chinawheelsja.com/maxus/inventory.html ; not a vehicle-specific Jacars ad.
+- KIG 2020 Ranger J$5.85M: private dealer communication; no exact public listing link known. Do not attach a merely similar Jacars truck.
+
+Photographs are matched by exact listing ad ID and cached by GitHub Actions. Avoid stock or unrelated dealer photos. The 2015 Wildtrak may need separate recovery after expiry.
