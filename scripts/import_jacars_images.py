@@ -95,6 +95,14 @@ def main():
         for vid, path in re.findall(r"""['"]([^'"]+)['"]:\s*\{\s*cover:\s*['"]([^'"]+)['"]""", MANIFEST.read_text()):
             if (ROOT / "static" / path.lstrip("/")).exists():
                 existing[vid] = path
+    # Two ranked vehicles were verified as the same advert as legacy watchlist records.
+    # Reuse the already cached photographs rather than fetching unrelated images.
+    for ranked_id, old_id in {
+        "l200-2022": "l200-2022-other",
+        "frontier-midnight-2019": "frontier-2019-other",
+    }.items():
+        if ranked_id not in existing and old_id in existing:
+            existing[ranked_id] = existing[old_id]
     for vid, url in records:
         if vid in existing:
             continue
