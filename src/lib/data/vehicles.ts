@@ -16,14 +16,14 @@ export type Vehicle = {
   positives?: string[];
 };
 export const vehicles: Vehicle[] = [
-  { id:'ranger-top-2019', title:'Ford Ranger 3.2 4WD', year:2019, priceJmd:4490000, mileageKm:51794, rank:1, status:'shortlist', drivetrain:'4WD', notes:'Historical top-ranked candidate; listing URL and current availability need verification.' },
+  { id:'ranger-top-2019', title:'Ford Ranger 3.2 4WD', year:2019, priceJmd:4490000, mileageKm:51794, rank:1, status:'shortlist', listingUrl:'https://www.jacars.net/adv/2523078_ford-ranger-3-2l-2019/', drivetrain:'4WD', notes:'Historical top-ranked candidate; listing URL and current availability need verification.' },
   { id:'l200-2022', title:'Mitsubishi L200 4WD', year:2022, priceJmd:4999000, mileageKm:70100, rank:2, status:'shortlist', drivetrain:'4WD', notes:'Historical ranked candidate; verify source.' },
-  { id: 'f150-2017', title: 'Ford F-150', year: 2017, priceJmd: 2800000, mileageKm: 98000, rank: 5, status: 'shortlist', notes: 'Previously reduced to J$2.8M. Verify listing status.' },
+  { id: 'f150-2017', title: 'Ford F-150', year: 2017, priceJmd: 2800000, mileageKm: 98000, rank: 5, status: 'shortlist', listingUrl:'https://www.jacars.net/adv/2527778_ford-f-150-3-5l-2017/', notes: 'Previously reduced to J$2.8M. Verify listing status.' },
   { id: 'frontier-2023', title: 'Nissan Frontier 2.5 Diesel', year: 2023, priceJmd: 5500000, mileageKm: 54000, rank: 3, status: 'shortlist', drivetrain: '4WD', listingUrl: 'https://www.jacars.net/adv/2526654_nissan-frontier-2-5l-2023/', notes: '2023 diesel 4WD candidate.', positives: ['Newer model year', 'Low reported mileage', '4WD'], concerns: ['Confirm service history and diesel system condition'] },
   { id: 'wildtrak-2021', title: 'Ford Ranger Wildtrak', year: 2021, priceJmd: 5700000, mileageKm: 58419, rank: 4, status: 'shortlist', listingUrl: 'https://www.jacars.net/adv/2528226_2021-ford-ranger/', notes: 'Replaced the earlier 92,000 km Wildtrak.', positives: ['Lower mileage than previous Wildtrak listing'], concerns: ['Verify service history and condition'] },
   { id:'wildtrak-2015', title:'Ford Ranger Wildtrak 3.2', year:2015, priceJmd:3300000, mileageKm:92437, rank:6, status:'shortlist', concerns:['Age and financing eligibility'] },
   { id:'dmax-2015', title:'Isuzu D-Max 3.0', year:2015, priceJmd:3550000, mileageKm:78775, rank:7, status:'shortlist', concerns:['Age and financing eligibility'] },
-  { id:'wildtrak-2017', title:'Ford Ranger Wildtrak', year:2017, priceJmd:3830000, mileageKm:148000, rank:8, status:'shortlist', concerns:['Higher reported mileage'] },
+  { id:'wildtrak-2017', title:'Ford Ranger Wildtrak', year:2017, priceJmd:3830000, mileageKm:148000, rank:8, status:'shortlist', listingUrl:'https://www.jacars.net/adv/2526738_ford-ranger-3-4l-2017/', concerns:['Higher reported mileage'] },
   { id: 'frontier-midnight-2019', title: 'Nissan Frontier SV Midnight Edition', year: 2019, priceJmd: 3500000, mileageKm: 108000, rank: 9, status: 'shortlist' },
   { id: 'maxus-2026', title: 'MAXUS T60', year: 2026, priceJmd: 5000000, rank: 10, status: 'shortlist', transmission: 'Manual' },
   { id: 'ranger-kig-2020', title: 'Ford Ranger (KIG)', year: 2020, priceJmd: 5850000, status: 'watchlist', notes: 'Dealer says serviced by KIG; seller upgrading.' },
