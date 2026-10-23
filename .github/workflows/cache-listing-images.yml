@@ -2,7 +2,7 @@ name: Cache listing photographs
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 10 * * 1'
+    - cron: '0 10 * * *'
   push:
     paths:
       - 'src/lib/data/vehicles.ts'
