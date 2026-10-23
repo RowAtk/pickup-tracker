@@ -33,7 +33,7 @@
         <p class="mt-2 text-sm text-zinc-400">{vehicle.mileageKm ? vehicle.mileageKm.toLocaleString() + ' km' : 'Mileage TBD'} {vehicle.drivetrain ? ' · ' + vehicle.drivetrain : ''} {vehicle.transmission ? ' · ' + vehicle.transmission : ''}</p>
         {#if vehicle.notes}<p class="mt-4 text-sm leading-relaxed text-zinc-400">{vehicle.notes}</p>{/if}
         <a href={`/vehicles/${vehicle.id}`} class="mt-5 mr-3 inline-block rounded-lg border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-200 hover:border-amber-400">Details →</a>
-        {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="mt-5 inline-block rounded-lg bg-amber-400 px-4 py-2 text-sm font-bold text-zinc-950 hover:bg-amber-300">View listing ↗</a>{/if}
+        {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="mt-5 inline-block rounded-lg bg-amber-400 px-4 py-2 text-sm font-bold text-zinc-950 hover:bg-amber-300">{vehicle.sourceKind === 'dealer-catalogue' ? 'Dealer inventory ↗' : 'View listing ↗'}</a>{/if}
         </div>
       </article>
       {/each}
