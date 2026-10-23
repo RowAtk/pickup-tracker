@@ -20,7 +20,7 @@
     <a href="/" class="text-sm text-zinc-400 hover:text-amber-400">← Back to dashboard</a>
     <div class="mt-7 flex flex-wrap items-start justify-between gap-5">
       <div><p class="mb-2 text-xs font-bold uppercase tracking-widest text-amber-400">{vehicle.status}{vehicle.rank ? ' · Rank #' + vehicle.rank : ''}</p><h1 class="text-3xl font-bold sm:text-5xl">{vehicle.year || 'Year TBD'} {vehicle.title}</h1><p class="mt-3 text-3xl font-bold">{vehicle.priceJmd ? money(vehicle.priceJmd) : 'Price TBD'}</p></div>
-      {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="rounded-lg bg-amber-400 px-5 py-3 font-semibold text-zinc-950">Original listing ↗</a>{/if}
+      {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="rounded-lg bg-amber-400 px-5 py-3 font-semibold text-zinc-950">{vehicle.sourceKind === 'dealer-catalogue' ? 'Dealer inventory ↗' : 'Original listing ↗'}</a>{/if}
     </div>
     {#if image?.cover}
       <figure class="mt-8 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
