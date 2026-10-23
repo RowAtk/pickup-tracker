@@ -104,6 +104,10 @@ def main():
         if ranked_id not in existing and old_id in existing:
             existing[ranked_id] = existing[old_id]
     for vid, url in records:
+        host = (urllib.parse.urlparse(url).hostname or "").lower()
+        if host not in ("jacars.net", "www.jacars.net"):
+            print(f"Skipping non-Jacars source for {vid}: {url}", flush=True)
+            continue
         if vid in existing:
             continue
         path = import_one(vid, url)
