@@ -6,6 +6,7 @@ export const vehicleImages: Record<string, { cover: string; gallery?: string[]; 
   "frontier-2019-other": { cover: "/vehicles/frontier-2019-other/cover.webp", credit: 'Original listing photograph' },
   "frontier-2023": { cover: "/vehicles/frontier-2023/cover.webp", credit: 'Original listing photograph' },
   "frontier-midnight-2019": { cover: "/vehicles/frontier-midnight-2019/cover.webp", credit: 'Original listing photograph' },
+  "frontier-xgear-2021": { cover: "/vehicles/frontier-xgear-2021/cover.webp", credit: 'Original listing photograph' },
   "hilux-2019": { cover: "/vehicles/hilux-2019/cover.webp", credit: 'Original listing photograph' },
   "l200-2022": { cover: "/vehicles/l200-2022/cover.webp", credit: 'Original listing photograph' },
   "l200-2022-other": { cover: "/vehicles/l200-2022-other/cover.webp", credit: 'Original listing photograph' },
