@@ -27,7 +27,7 @@ jobs:
           node-version: '22'
       - name: Validate application build
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
       - name: Verify runner can reach listing and image hosts
         run: |
