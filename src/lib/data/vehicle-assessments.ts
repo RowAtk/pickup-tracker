@@ -3053,5 +3053,120 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
         "url": "https://www.facebook.com/marketplace/item/1070050685685439/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A82aa130a-9ea9-42fc-8576-315d81a23baf"
       }
     ]
+  },
+  "navara-pro4x-2022-2530201": {
+    "checkedAt": "2026-10-25",
+    "coverage": "Original Jacars advert text and all seven listing photographs reviewed. No seller contact, physical inspection, diagnostic test or VIN verification performed.",
+    "verdict": "Distinct watchlist contender. J$6M, low advertised mileage, automatic diesel/RHD and PRO-4X-style equipment make it worth investigating, but the engine-size discrepancy, unverified trim/history and wheel modifications prevent automatic promotion above established leads.",
+    "specifications": [
+      {
+        "label": "Model/year",
+        "value": "2022 Nissan Navara; PRO-4X-badged",
+        "basis": "Advert year/model; branding visible in photos. Genuine trim requires VIN confirmation."
+      },
+      {
+        "label": "Price",
+        "value": "J$6,000,000 negotiable",
+        "basis": "Original advert"
+      },
+      {
+        "label": "Mileage",
+        "value": "56,700 km advertised; 56,608 km in photo 6",
+        "basis": "92-km difference; obtain a current odometer image. Photo does not establish lifetime accuracy."
+      },
+      {
+        "label": "Engine/fuel",
+        "value": "Diesel; 2.6L entered in advert, actual displacement unconfirmed",
+        "basis": "Do not treat the advert field as verified. Nissan regional Navara/Frontier sources describe 2.5L diesels; original market/VIN must settle this unit."
+      },
+      {
+        "label": "Transmission / steering",
+        "value": "Automatic / right-hand drive",
+        "basis": "Advert and cabin photographs. Exact gear count unconfirmed."
+      },
+      {
+        "label": "Drivetrain",
+        "value": "4WD selector and rear differential-lock control pictured",
+        "basis": "Photo 5 supports equipment presence; operation requires inspection."
+      },
+      {
+        "label": "Body / seats / location",
+        "value": "Grey double-cab pickup, five advertised seats, Saint Andrew",
+        "basis": "Advert and exterior/cabin photos"
+      }
+    ],
+    "sellerClaims": [
+      "Seller Nick asks J$6M negotiable and advertises a 2022 diesel automatic with 56,700 km and RHD.",
+      "Aftermarket Rugged rims, brand-new all-terrain tyres, originals available, Roll n’ Lock bed cover, front nudge bar, rear roll bar, leather interior and ceramic coating are advertised. Clarify whether originals means wheels alone or wheels and tyres."
+    ],
+    "photoFindings": [
+      "Photos 1–3 show a grey double cab with PRO-4X branding, black alloy wheels/all-terrain tyres, front nudge bar, sports/roll bar, side steps and a roll-top bed cover. Branding is not VIN-level authentication of factory PRO-4X trim.",
+      "Photos 4–5 support RHD, an automatic gear selector, dark leather-style seats, touchscreen/Bluetooth interface, dual-zone climate display, rotary 4WD selector and a rear differential-lock control. No demonstration establishes that every feature works.",
+      "Photo 6 clearly displays 56,608 km, broadly consistent with the later 56,700-km advert. The 92-km difference is small; request a current reading and chronological records rather than assuming odometer accuracy.",
+      "Photo 7 shows rear seating. Seat condition in pictures does not establish accident-free status, and the advert provides no engine-bay, underside or service-invoice photographs.",
+      "Aftermarket wheels/tyres are disclosed. Their presence does not prove a suspension lift, ECU tune or drivetrain alteration; ask explicitly rather than assuming either stock or extensively modified."
+    ],
+    "serviceHistory": "No dated servicing, accident/repair history, ownership count or import history supplied. Brand-new tyres and ceramic coating are cosmetic/consumable claims, not evidence of mechanical maintenance. Request dealer/VIN service history, engine and gearbox fluid records, cooling work and odometer chronology.",
+    "ownershipFit": "Automatic diesel/RHD and apparent low-range 4WD equipment fit commuting, occasional trips and the climb home. The leather-style cabin and dual-zone climate may appeal. Test tyre noise, steering, braking and ride on your usual roads, and inspect wheel offset/size/clearance before accepting the modifications. Verify local parts support and original-market specification.",
+    "comparison": "J$500,000 more than #2 (2023 Frontier at J$5.5M/54,000 km), while a model year older and 2,700 km higher on the advert; premium equipment must justify that difference. J$300,000 above #3 Wildtrak (2021/J$5.7M/58,419 km), but one model year newer and 1,719 km less stated use. Against #5 (2022 Frontier/J$5.2M/103,000 km), it costs J$800,000 more for 46,300 km less advertised use. A possible middle-shortlist candidate after verification; leave current ranks unchanged for now.",
+    "inspection": [
+      "Obtain VIN/model code, registration and original purchase/import documentation; confirm genuine PRO-4X, actual engine displacement/code, automatic gear count and original market. Resolve the 2.6L field before valuation/insurance.",
+      "Request dated service invoices or dealer printout, accident/repair records and a current odometer photo. Ask whether any warranty remains and verify it with the issuing dealer.",
+      "Independent cold start, full-module scan, diesel/injector/turbo assessment as indicated, cooling pressure test and hot/cold gearbox road test including a sustained incline.",
+      "Demonstrate 4WD/low range and differential lock on an appropriate surface. Inspect chassis, underbody, corrosion, repairs, suspension and signs of towing/heavy use.",
+      "Document wheel diameter/width/offset, tyre size/load/speed ratings, date codes, alignment and rubbing at full lock/load. Inspect nudge-bar/roll-bar mounts, wiring and camera/sensor clearance; obtain original wheels if included.",
+      "Ask explicitly about lifts/spacers, ECU tunes, emissions modifications and previous damage; price any return to original configuration.",
+      "Test cameras, touchscreen/phone compatibility, A/C, all keys and tonneau locks/drains. Confirm title/lien clearance, final price and actual seller inventory before any deposit."
+    ],
+    "unknowns": [
+      "VIN-confirmed engine, genuine trim, original market and gear count",
+      "Service/accident/import history and odometer continuity",
+      "Actual modification scope, tyre specifications and included original parts",
+      "Mechanical condition, any remaining warranty and seller-confirmed availability"
+    ],
+    "sources": [
+      {
+        "label": "Original Jacars advert 2530201",
+        "url": "https://www.jacars.net/adv/2530201_nissan-navara-2-6l-2022/"
+      },
+      {
+        "label": "Nissan Navara regional specification reference (not this VIN)",
+        "url": "https://www.nissan.co.za/vehicles/new/navara/specs.html"
+      },
+      {
+        "label": "Nissan Jamaica diesel Frontier reference (not this VIN)",
+        "url": "https://www.nissanjamaica.com/vehicles/new/np300-frontier/Performance.html"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Listing photo 1",
+        "url": "https://cdn2.jacars.net/media/cache/0a/5c/0a5c9e0b0b8afaa171b571c65b2a663d.webp"
+      },
+      {
+        "label": "Listing photo 2",
+        "url": "https://cdn2.jacars.net/media/cache/55/3c/553cc86f310d831ae5c065d5eca57fdc.webp"
+      },
+      {
+        "label": "Listing photo 3",
+        "url": "https://cdn2.jacars.net/media/cache/0f/c4/0fc4043241acbc5ffc1ea6330dc3f59e.webp"
+      },
+      {
+        "label": "Listing photo 4",
+        "url": "https://cdn2.jacars.net/media/cache/10/c4/10c485892f9f869664f1858cbf97d746.webp"
+      },
+      {
+        "label": "Listing photo 5",
+        "url": "https://cdn2.jacars.net/media/cache/e9/f5/e9f5033410d1b298b7a3edea27449b8a.webp"
+      },
+      {
+        "label": "Listing photo 6",
+        "url": "https://cdn2.jacars.net/media/cache/33/a0/33a02973e7834d031ea4b36440424840.webp"
+      },
+      {
+        "label": "Listing photo 7",
+        "url": "https://cdn2.jacars.net/media/cache/54/b2/54b22165f8113e5f16be7f70bb9fa655.webp"
+      }
+    ]
   }
 };
