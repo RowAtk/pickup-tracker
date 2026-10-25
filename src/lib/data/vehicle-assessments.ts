@@ -3168,5 +3168,135 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
         "url": "https://cdn2.jacars.net/media/cache/54/b2/54b22165f8113e5f16be7f70bb9fa655.webp"
       }
     ]
+  },
+  "gwm-pseries-2023-2514157": {
+    "checkedAt": "2026-10-25",
+    "coverage": "Original Jacars advert and all 12 listing photos reviewed. Model family identified from GWM branding/body/cabin photographs; exact trim not established. No seller contacted or physical/diagnostic inspection performed. Absence of a published vehicle identification number is not treated as a shortlisting defect.",
+    "verdict": "A serious affordable watchlist contender. J$3.99M for a 2023 automatic diesel pickup with advertised 4WD/RHD and 87,646 km deserves inspection alongside the lower-priced Rangers. Service history, actual 4WD operation, wheel changes and practical local parts support matter more than the generic Other advert category.",
+    "specifications": [
+      {
+        "label": "Make/model",
+        "value": "GWM P-Series / Cannon-family double cab; exact trim unconfirmed",
+        "basis": "GWM badges and pictured body/cabin; Jacars category only says Cars Other"
+      },
+      {
+        "label": "Year / price",
+        "value": "2023 / J$3,990,000 negotiable; swaps considered",
+        "basis": "Original advert"
+      },
+      {
+        "label": "Mileage",
+        "value": "87,646 km advertised",
+        "basis": "No sufficiently clear odometer close-up in the 12 photos independently establishes the exact reading"
+      },
+      {
+        "label": "Powertrain",
+        "value": "2.0L diesel, automatic",
+        "basis": "Advert engine/fuel/gearbox; automatic selector visible. Exact gearbox specification not established"
+      },
+      {
+        "label": "Drivetrain / steering",
+        "value": "4WD advertised / RHD",
+        "basis": "RHD visible in cabin photographs; seller’s 4WD claim still needs an operational check"
+      },
+      {
+        "label": "Body / seats / location",
+        "value": "White double cab, five advertised seats, Kingston",
+        "basis": "Original advert and photographs"
+      }
+    ],
+    "sellerClaims": [
+      "JusDrive at 57 Hope Road advertises J$3.99M negotiable, 2023, 87,646 km, 2.0L diesel, automatic, 4WD, RHD and five seats.",
+      "Dealer describes the truck as excellent condition, very clean and everything working. No service record, accident history or warranty is provided in the advert."
+    ],
+    "photoFindings": [
+      "All 12 photographs show a white GWM double cab; GWM branding is clearly visible on the tailgate and steering wheel. P-Series/Cannon-family identification is a visual assessment, not a stated model name in the advert.",
+      "Photos 7–10 show RHD, an automatic selector, cloth-style seating, a push-start button, cruise/audio steering-wheel controls and a relatively basic radio/cabin layout. Do not copy leather, large touchscreen or premium driver aids from higher P-Series trims.",
+      "Exterior images show bronze-coloured aftermarket-style wheels and chunky tyres. Exact wheel offset, tyre size/load rating and any suspension changes are unknown; wheel changes do not by themselves prove a lift or ECU tune.",
+      "Rear bumper parking-sensor circles are visible; camera availability/operation and all other electronics need demonstration.",
+      "No engine-bay, chassis/underside, readable current odometer, service invoice or independent inspection report is supplied. Clean exterior/interior appearance cannot settle mechanical condition or accident history."
+    ],
+    "serviceHistory": "No dated service invoices or repair/ownership history supplied. At 87,646 advertised km, ask for engine oil/fuel-filter records, transmission servicing, cooling-system work and any previous faults. Confirm whether the truck was originally sold locally or imported and whether any original warranty remains transferable; do not apply today’s new-vehicle warranty advertisement to this 2023 used unit.",
+    "ownershipFit": "Automatic diesel/RHD is a good basic configuration for commuting and the climb home. Test cold/hot gear changes, hill performance, tyre noise and braking on your usual roads. GWM has an official Jamaican dealer/parts/service route through Stewart’s, which is a positive compared with having no local support. Actual stock, repair turnaround, willingness to support this exact market version and maintenance prices remain enquiries to make, not established guarantees.",
+    "comparison": "Only J$190,000 above #4’s 2019 Ranger XLT, while four model years newer and 42,463 km lower on advertised mileage. J$500,000 below #1’s 2019 Ranger, but 35,852 km higher. J$1.51M below #2’s 2023 Frontier with 33,646 km more stated use. That is a strong price/year proposition, balanced against unverified individual history, aftermarket wheels and unpriced parts/resale exposure. Inspect before promoting; current eight ranks remain unchanged.",
+    "inspection": [
+      "Ask JusDrive for exact model/trim, current odometer image, original purchase/import background, ownership/accident history and complete service invoices. As the dealer also advertises #1, compare the trucks during one visit if both remain available.",
+      "Independent cold start, full-system scan and hot road test; check injector/turbo behaviour as indicated, cooling-system pressure, leaks and automatic shifts, including a sustained incline.",
+      "Demonstrate the advertised 4WD/low range on a suitable surface, check axle/transfer-case leaks and inspect chassis/underbody, suspension bushes, brakes, corrosion and repair seams.",
+      "Measure wheel/tyre sizes, offset and load/speed ratings; check date codes, alignment, rubbing at full steering lock/load and signs of lift/spacer or wiring changes. Ask whether original wheels are included.",
+      "Contact Stewart’s/GWM with the exact model/registration details to confirm service support, any valid warranty, common maintenance-part availability, lead times and a scheduled-service quote. Verify vehicle identity against paperwork when viewing, as for any serious contender.",
+      "Test A/C, radio/phone functions, cruise, sensors/camera if fitted, all keys and warning lamps. Obtain final price, title/lien clearance and written seller stock confirmation before committing."
+    ],
+    "unknowns": [
+      "Documented servicing, accident/import/ownership history and current odometer",
+      "Exact trim/gearbox specification and working 4WD equipment",
+      "Full wheel/suspension modification scope and original parts availability",
+      "Actual parts lead times, service pricing, warranty eligibility and future resale",
+      "Physical condition and seller-confirmed availability"
+    ],
+    "sources": [
+      {
+        "label": "Original Jacars advert 2514157",
+        "url": "https://www.jacars.net/adv/2514157_cars-other-2-0l-2023/"
+      },
+      {
+        "label": "Official GWM Caribbean: Stewart’s Kingston dealership",
+        "url": "https://gwmcaribbean.com/dealership/stewarts-automotive-group-kingston/"
+      },
+      {
+        "label": "GWM Jamaica parts and service information",
+        "url": "https://gwmjamaica.com/newhome/customer-care/"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Listing photo 1",
+        "url": "https://cdn2.jacars.net/media/cache/44/4a/444af34e68f8373e68e5cb5857cb04d9.webp"
+      },
+      {
+        "label": "Listing photo 2",
+        "url": "https://cdn2.jacars.net/media/cache/81/fc/81fc10d9a94982761d436162b6f474a4.webp"
+      },
+      {
+        "label": "Listing photo 3",
+        "url": "https://cdn2.jacars.net/media/cache/7a/b5/7ab54a55b750da863038505e9474c198.webp"
+      },
+      {
+        "label": "Listing photo 4",
+        "url": "https://cdn2.jacars.net/media/cache/08/69/0869d89246fba4bceaa68cdb8516f407.webp"
+      },
+      {
+        "label": "Listing photo 5",
+        "url": "https://cdn2.jacars.net/media/cache/da/12/da12e501d4e7fc16c83a6b78dc17a793.webp"
+      },
+      {
+        "label": "Listing photo 6",
+        "url": "https://cdn2.jacars.net/media/cache/2f/7e/2f7e82b51becc88138c9d93436f8ecbf.webp"
+      },
+      {
+        "label": "Listing photo 7",
+        "url": "https://cdn2.jacars.net/media/cache/40/92/409270e8a4698b68befae12076d3c243.webp"
+      },
+      {
+        "label": "Listing photo 8",
+        "url": "https://cdn2.jacars.net/media/cache/52/ee/52ee19485f33b76fc90377298eadbe17.webp"
+      },
+      {
+        "label": "Listing photo 9",
+        "url": "https://cdn2.jacars.net/media/cache/0e/98/0e981a19f741e7c3cf865dfc77708c8c.webp"
+      },
+      {
+        "label": "Listing photo 10",
+        "url": "https://cdn2.jacars.net/media/cache/bf/ad/bfaddc30ad83692d8ace5a607486f55f.webp"
+      },
+      {
+        "label": "Listing photo 11",
+        "url": "https://cdn2.jacars.net/media/cache/1c/ef/1cef3f64d927f7496c4eb6afb1847e81.webp"
+      },
+      {
+        "label": "Listing photo 12",
+        "url": "https://cdn2.jacars.net/media/cache/9c/4f/9c4fc5d41575d1ebabc9dd0a787f6b56.webp"
+      }
+    ]
   }
 };
