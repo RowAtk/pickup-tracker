@@ -56,7 +56,7 @@ lines = [
 ]
 for record in records:
     lines.append(f"| {record['id']} | {', '.join(record['missing']) or 'None'} |")
-summary.write_text("\\n".join(lines) + "\\n")
+summary.write_text(chr(10).join(lines) + chr(10))
 import os
 if os.environ.get("GITHUB_STEP_SUMMARY"):
     with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as handle:
