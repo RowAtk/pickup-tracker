@@ -5,7 +5,8 @@
   import { vehicleAssessments } from '$lib/data/vehicle-assessments';
   import VehicleAssessment from '$lib/components/VehicleAssessment.svelte';
   let vehicle = $derived(vehicles.find(v => v.id === page.params.id));
-  let deposit = $state(2000000);
+  let deposit = $state(1400000);
+  const depositPresets = [1000000, 1400000, 1800000, 2000000];
   let rateScenario = $state<'staff' | 'commercial'>('staff');
   let annualRate = $state(3);
   // Calendar-year age follows the financing bands supplied by the user.
@@ -67,6 +68,11 @@
       {/if}
       <section class="self-start rounded-xl border border-zinc-800 bg-zinc-900 p-6"><h2 class="text-xl font-bold">Loan estimate</h2><p class="mt-2 text-sm text-zinc-400">Illustrative reducing-balance loan. Excludes fees and insurance.</p>
         <label class="mt-5 block text-sm text-zinc-300">Down payment (J$)<input type="number" min="0" max={vehicle.priceJmd || undefined} step="100000" bind:value={deposit} class="mt-2 w-full rounded-lg border border-zinc-700 bg-zinc-950 p-3"/></label>
+        <div class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Quick down payment amounts">
+          {#each depositPresets as amount}
+            <button type="button" aria-pressed={deposit === amount} onclick={() => deposit = amount} class={`rounded-lg border px-3 py-2 text-sm font-semibold ${deposit === amount ? 'border-amber-400 bg-amber-400 text-zinc-950' : 'border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-amber-400'}`}>J${amount / 1000000}M</button>
+          {/each}
+        </div>
         <div class="mt-5 flex gap-2"><button type="button" onclick={() => { rateScenario = 'staff'; annualRate = 3; }} class={`rounded-lg px-3 py-2 text-sm ${rateScenario === 'staff' ? 'bg-amber-400 text-zinc-950' : 'bg-zinc-800'}`}>Staff 3%</button><button type="button" onclick={() => { rateScenario = 'commercial'; annualRate = isNew ? 8.35 : 10.6; }} class={`rounded-lg px-3 py-2 text-sm ${rateScenario === 'commercial' ? 'bg-amber-400 text-zinc-950' : 'bg-zinc-800'}`}>Commercial estimate</button></div>
         <label class="mt-4 block text-sm text-zinc-300">Annual interest rate (%)<input type="number" min="0" max="100" step=".1" bind:value={annualRate} class="mt-2 w-full rounded-lg border border-zinc-700 bg-zinc-950 p-3"/></label>
         <label class="mt-4 block text-sm text-zinc-300">Term (years)<select value={years} onchange={(event) => requestedYears = Number(event.currentTarget.value)} class="mt-2 w-full rounded-lg border border-zinc-700 bg-zinc-950 p-3">{#each termOptions as y}<option value={y}>{y === 8.5 ? '8.5 (102 months)' : y}</option>{/each}</select></label>
