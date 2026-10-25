@@ -88,7 +88,12 @@ def import_one(vid, url):
 
 def main():
     source = DATA.read_text()
-    records = re.findall(r"\{\s*id:\s*['\"]([^'\"]+)['\"][^{}]*?listingUrl:\s*['\"](https?[^'\"]+)['\"]", source, re.S)
+    records = []
+    for line in source.splitlines():
+        id_match = re.search(r"\\bid:\\s*['\\\"]([^'\\\"]+)['\\\"]", line)
+        url_match = re.search(r"\\blistingUrl:\\s*['\\\"](https?[^'\\\"]+)['\\\"]", line)
+        if id_match and url_match:
+            records.append((id_match.group(1), url_match.group(1)))
     print(f"Found {len(records)} vehicles with URLs", flush=True)
     existing = {}
     if MANIFEST.exists():
