@@ -2297,57 +2297,124 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ]
   },
   "ranger-2019": {
-    "checkedAt": "2026-10-24",
-    "coverage": "Original link rechecked by direct retrieval and browser: 404. Prior user screenshot details retained as historical evidence; sale status not inferred.",
-    "verdict": "Keep as an evidence-limited watchlist entry. The earlier user screenshots are useful, but this pass cannot establish a live advert or enough drivetrain detail to promote it.",
+    "checkedAt": "2026-10-25",
+    "coverage": "Full original Jacars URL now accessible. Original advert and all 13 photographs reviewed; this supersedes the prior inaccessible-link assessment. No seller contact, physical inspection or diagnostic testing performed. Vehicle identity/paperwork checks belong at viewing; absence of a published identifier is not a listing penalty.",
+    "verdict": "Existing watchlist lead successfully recovered and reassessed. J$4.5M/65,000 advertised km is worth retaining, but extensive visible cosmetic changes, unresolved drivetrain and no service documentation keep it below the leading Ranger at its current ask.",
     "specifications": [
       {
-        "label": "Year",
-        "value": "2019",
-        "basis": "See source coverage and seller/photo evidence"
+        "label": "Model / year",
+        "value": "2019 Ford Ranger 2.2 diesel; exact trim unconfirmed",
+        "basis": "Current advert plus pictured 2.2 side badge; Wildtrak wording appears on exterior graphics and is not sufficient trim evidence"
       },
       {
-        "label": "Mileage (historical/advertised)",
-        "value": "65000",
-        "basis": "See source coverage and seller/photo evidence"
+        "label": "Price / mileage",
+        "value": "J$4,500,000 negotiable / 65,000 km advertised",
+        "basis": "Fresh original advert; no legible odometer close-up independently establishes mileage"
       },
       {
-        "label": "Transmission",
-        "value": "Unconfirmed",
-        "basis": "See source coverage and seller/photo evidence"
+        "label": "Transmission / steering",
+        "value": "Automatic / RHD supported by cabin photographs",
+        "basis": "Photos 9–10 show RHD steering, an automatic-style selector and pedal arrangement. Gear count not established"
       },
       {
         "label": "Drivetrain",
-        "value": "Unconfirmed",
-        "basis": "See source coverage and seller/photo evidence"
+        "value": "Unconfirmed: 2WD or 4WD not established",
+        "basis": "The original advert has no drivetrain field/claim; supplied photographs do not clearly establish 4WD controls/hardware"
+      },
+      {
+        "label": "Body / seats / location",
+        "value": "White double cab / five advertised seats / Saint Ann",
+        "basis": "Original advert and photographs"
       }
     ],
     "sellerClaims": [
-      "Historical user screenshots: J$4.5M negotiable, 65,000 km, 2019 2.2L diesel, Saint Ann, five seats, seller ssmith",
-      "The same link previously opened for the user despite a runner 404"
+      "Fresh ssmith advert lists 2019 Ranger, 2.2L diesel, 65,000 km, five seats and J$4.5M negotiable.",
+      "The description makes generic performance/reliability claims and invites viewing; it supplies no dated maintenance, accident history, transmission specification or explicit drivetrain."
     ],
     "photoFindings": [
-      "This pass returns a 404 both through direct retrieval and the browser",
-      "No fresh listing photos are available to confirm transmission, drivetrain or condition; the 404 must not be translated into sold status"
+      "All 13 photos inspected. Exterior shows white bodywork with large black Ranger/Wildtrak-style graphics, black multi-spoke aftermarket-style wheels, chunky tyres, flares, side steps and bonnet styling.",
+      "Photos 9–10 support right-hand drive and an automatic transmission. The cabin has cloth seating, a multimedia screen and steering-wheel controls; do not assume a factory Wildtrak equipment package from exterior decals.",
+      "The photographed side badge in photo 12 reads 2.2, consistent with the advert. Wildtrak lettering on the graphics is a styling detail, not proof of original trim.",
+      "Exterior photos show different grille treatments: early photos have a more conventional black grille, while photo 12 shows large FORD lettering. Ask which configuration is current and when the photographs were taken; the difference alone does not establish accident damage.",
+      "The photos do not clearly establish a 4WD selector, operating low range, exact gear count or actual suspension lift. Do not equate rugged tyres/flared arches with functioning 4WD.",
+      "No engine-bay, underside, service-invoice or legible odometer close-up is included. Extensive graphics and accessories increase the importance of inspecting paint/bodywork and modification quality in person."
     ],
-    "serviceHistory": "No service or accident records supplied. Earlier screenshot facts are retained as historical user-provided evidence.",
-    "ownershipFit": "Could be a sensible price band if automatic/RHD/appropriate drivetrain and condition are established. Currently too many basics remain unresolved.",
-    "comparison": "J$10,000 above #1 with 13,206 km more historically reported use. No demonstrated value advantage unless history/condition is materially better.",
+    "serviceHistory": "No dated service/repair records supplied. Request original purchase/import background, chronological mileage evidence and invoices for engine oil/fuel filters, cooling-system work and automatic-transmission maintenance. The earlier access failure was a source-access limitation, not evidence that this vehicle had sold.",
+    "ownershipFit": "Automatic diesel/RHD is promising for commuting. The 2.2L engine should be judged on a hill road test rather than dismissed on displacement alone. Wheel/tyre noise, ride, alignment, braking and any suspension changes matter given your preference to avoid modification-related maintenance. Drivetrain remains a question to resolve before assigning 4WD capability.",
+    "comparison": "J$10,000 above #1 (2019 Ranger at J$4.49M/51,794 km) with 13,206 km more advertised use, a smaller listed engine and more obvious cosmetic changes. There is no clear value reason to prefer it without better records/condition. Versus #4 (2019 XLT/J$3.8M/130,109 km), it costs J$700,000 more for 65,109 km less stated use; #4 already advertises automatic 4WD. With J$2M down and 3% over five years, this one's estimate is about J$44,922/month excluding fees/insurance. Keep on watchlist; existing rankings unchanged.",
     "inspection": [
-      "Recover a working advert or seller-provided VIN/specification sheet and current odometer",
-      "Confirm transmission, drivetrain, steering side and engine",
-      "Obtain servicing/repair and ownership records before arranging an independent inspection",
-      "Confirm availability directly before any valuation or deposit"
+      "Ask for a current odometer image, exact transmission/drivetrain specification, servicing and accident/import/ownership records, and current seller availability before travelling.",
+      "Ask which pictured grille/bonnet/wheel configuration is current. Obtain a modification list including wheel dimensions/offset, tyre sizes, any lift/spacers, suspension work, tuning or emissions changes and whether original parts are included.",
+      "Verify actual 2WD/4WD hardware and, if fitted, demonstrate 4WD/low range on an appropriate surface. Do not use graphics or wheel size as drivetrain evidence.",
+      "Independent cold start, module scan, diesel/turbo checks as indicated, cooling pressure test and hot/cold automatic road test including the hill.",
+      "Inspect chassis, body/paint under and around graphics, repair seams, flares/bonnet fitment, corrosion, wiring and suspension geometry. Check tyre date/load ratings, rubbing, steering and brake behaviour.",
+      "Test A/C, infotainment, cruise/steering-wheel functions, cameras/sensors if fitted, and all keys. Check vehicle identity/title/lien status against paperwork at viewing.",
+      "Compare records and physical condition directly with #1 and #4; negotiate on actual condition rather than accessories."
     ],
     "unknowns": [
-      "Live source access and current availability",
-      "Transmission/drivetrain/steering side and actual current mileage",
-      "Service/accident history and mechanical condition"
+      "Actual 2WD/4WD configuration and exact factory trim",
+      "Service/accident/import history and odometer continuity",
+      "Current configuration, full modification scope and original parts",
+      "Mechanical condition, gear count and seller-confirmed inventory"
     ],
     "sources": [
       {
-        "label": "Original listing / dealer page",
-        "url": "https://www.jacars.net/adv/2529943"
+        "label": "Working full original Jacars advert 2529943",
+        "url": "https://www.jacars.net/adv/2529943_2019-ford-ranger/"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Listing photo 1",
+        "url": "https://cdn2.jacars.net/media/cache/65/39/65395d6251c3941a2607f77a9fed989e.webp"
+      },
+      {
+        "label": "Listing photo 2",
+        "url": "https://cdn2.jacars.net/media/cache/a5/80/a5809449b1797d9fb8300a7ae8eccf6d.webp"
+      },
+      {
+        "label": "Listing photo 3",
+        "url": "https://cdn2.jacars.net/media/cache/e5/46/e5463da1e846371cccdd3f2020c2547f.webp"
+      },
+      {
+        "label": "Listing photo 4",
+        "url": "https://cdn2.jacars.net/media/cache/ec/06/ec06910323a90951ba3d5a6ddac345c6.webp"
+      },
+      {
+        "label": "Listing photo 5",
+        "url": "https://cdn2.jacars.net/media/cache/b3/6e/b36e84f005ba29f0d0cbd6b842afbf0b.webp"
+      },
+      {
+        "label": "Listing photo 6",
+        "url": "https://cdn2.jacars.net/media/cache/ef/69/ef69961b382875c1f0a126de276368ae.webp"
+      },
+      {
+        "label": "Listing photo 7",
+        "url": "https://cdn2.jacars.net/media/cache/98/81/988109b71645fdf808688892d06309d5.webp"
+      },
+      {
+        "label": "Listing photo 8",
+        "url": "https://cdn2.jacars.net/media/cache/ef/3c/ef3c2decd0274de952e54c36b08383ca.webp"
+      },
+      {
+        "label": "Listing photo 9",
+        "url": "https://cdn2.jacars.net/media/cache/20/aa/20aab73fe9d83cbedcd8d4386dc6cb93.webp"
+      },
+      {
+        "label": "Listing photo 10",
+        "url": "https://cdn2.jacars.net/media/cache/98/10/98107c28b49e1f08f867a149df2028b3.webp"
+      },
+      {
+        "label": "Listing photo 11",
+        "url": "https://cdn2.jacars.net/media/cache/1f/bd/1fbd58579176aa8a0044ccbabd57645a.webp"
+      },
+      {
+        "label": "Listing photo 12",
+        "url": "https://cdn2.jacars.net/media/cache/1f/02/1f026dcb5af242306826636d381afeb6.webp"
+      },
+      {
+        "label": "Listing photo 13",
+        "url": "https://cdn2.jacars.net/media/cache/76/c7/76c7c0c7d654814256ab9fb79378c0db.webp"
       }
     ]
   },
