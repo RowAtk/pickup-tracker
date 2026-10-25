@@ -30,7 +30,7 @@ def parse_records(source):
         if "priceJmd:" not in line or "id:" not in line:
             continue
         def value(field):
-            m = re.search(r"\b" + field + r":\s*['\\"]([^'\\"]+)['\\"]", line)
+            m = re.search(r"\b" + field + r":\s*\x27([^\x27]+)\x27", line)
             return m.group(1) if m else None
         vid = value("id")
         if not vid:
