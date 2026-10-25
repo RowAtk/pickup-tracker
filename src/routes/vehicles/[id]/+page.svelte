@@ -2,6 +2,8 @@
   import { page } from '$app/state';
   import { vehicles } from '$lib/data/vehicles';
   import { vehicleImages } from '$lib/data/vehicle-images';
+  import { vehicleAssessments } from '$lib/data/vehicle-assessments';
+  import VehicleAssessment from '$lib/components/VehicleAssessment.svelte';
   let vehicle = $derived(vehicles.find(v => v.id === page.params.id));
   let deposit = $state(2000000);
   let rateScenario = $state<'staff' | 'commercial'>('staff');
@@ -15,6 +17,7 @@
   let years = $derived(Math.min(requestedYears ?? maxTerm, maxTerm));
   let termOptions = $derived([1, 2, 3, 4, 5, 6, 7, 8, 8.5].filter(y => y <= maxTerm));
   let financed = $derived(Math.max(0, (vehicle?.priceJmd ?? 0) - deposit));
+  let assessment = $derived(vehicle ? vehicleAssessments[vehicle.id] : undefined);
   let image = $derived(vehicle ? vehicleImages[vehicle.id] : undefined);
   let monthly = $derived(financed === 0 ? 0 : annualRate === 0 ? financed / (years * 12) : financed * (annualRate / 1200) / (1 - Math.pow(1 + annualRate / 1200, -years * 12)));
   const money = (n: number) => 'J$' + Math.round(n).toLocaleString('en-JM');
@@ -55,10 +58,14 @@
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Transmission</p><p class="mt-2 text-xl font-semibold">{vehicle.transmission ?? 'Unconfirmed'}</p></div>
     </div>
     <div class="mt-8 grid gap-5 md:grid-cols-2">
+      {#if assessment}
+        <VehicleAssessment {assessment} />
+      {:else}
       <section class="rounded-xl border border-zinc-800 bg-zinc-900 p-6"><h2 class="text-xl font-bold">Research notes</h2><p class="mt-3 leading-relaxed text-zinc-400">{vehicle.notes ?? 'Assessment pending. Confirm vehicle history and condition before committing.'}</p>
       {#if vehicle.positives?.length}<h3 class="mt-6 font-semibold text-emerald-400">Advantages</h3><ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-zinc-300">{#each vehicle.positives as item}<li>{item}</li>{/each}</ul>{/if}
       {#if vehicle.concerns?.length}<h3 class="mt-6 font-semibold text-amber-400">Things to check</h3><ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-zinc-300">{#each vehicle.concerns as item}<li>{item}</li>{/each}</ul>{/if}</section>
-      <section class="rounded-xl border border-zinc-800 bg-zinc-900 p-6"><h2 class="text-xl font-bold">Loan estimate</h2><p class="mt-2 text-sm text-zinc-400">Illustrative reducing-balance loan. Excludes fees and insurance.</p>
+      {/if}
+      <section class="self-start rounded-xl border border-zinc-800 bg-zinc-900 p-6"><h2 class="text-xl font-bold">Loan estimate</h2><p class="mt-2 text-sm text-zinc-400">Illustrative reducing-balance loan. Excludes fees and insurance.</p>
         <label class="mt-5 block text-sm text-zinc-300">Down payment (J$)<input type="number" min="0" max={vehicle.priceJmd || undefined} step="100000" bind:value={deposit} class="mt-2 w-full rounded-lg border border-zinc-700 bg-zinc-950 p-3"/></label>
         <div class="mt-5 flex gap-2"><button type="button" onclick={() => { rateScenario = 'staff'; annualRate = 3; }} class={`rounded-lg px-3 py-2 text-sm ${rateScenario === 'staff' ? 'bg-amber-400 text-zinc-950' : 'bg-zinc-800'}`}>Staff 3%</button><button type="button" onclick={() => { rateScenario = 'commercial'; annualRate = isNew ? 8.35 : 10.6; }} class={`rounded-lg px-3 py-2 text-sm ${rateScenario === 'commercial' ? 'bg-amber-400 text-zinc-950' : 'bg-zinc-800'}`}>Commercial estimate</button></div>
         <label class="mt-4 block text-sm text-zinc-300">Annual interest rate (%)<input type="number" min="0" max="100" step=".1" bind:value={annualRate} class="mt-2 w-full rounded-lg border border-zinc-700 bg-zinc-950 p-3"/></label>
@@ -71,3 +78,4 @@
   {:else}<h1 class="text-2xl font-bold">Vehicle not found</h1><a href="/" class="mt-5 inline-block text-amber-400">Return to dashboard</a>{/if}
   </main>
 </div>
+
