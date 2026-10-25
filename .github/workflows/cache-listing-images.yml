@@ -57,7 +57,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pickup-data-quality
-          path: reports/vehicle-quality.json
+          path: |
+            reports/vehicle-quality.json
+            reports/vehicle-quality.md
+            reports/image-sweep.json
           if-no-files-found: warn
       - name: Commit cached photos and manifest
         run: |
