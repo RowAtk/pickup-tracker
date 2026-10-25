@@ -19,7 +19,7 @@
   {#if vehicle}
     <a href="/" class="text-sm text-zinc-400 hover:text-amber-400">← Back to dashboard</a>
     <div class="mt-7 flex flex-wrap items-start justify-between gap-5">
-      <div><p class="mb-2 text-xs font-bold uppercase tracking-widest text-amber-400">{vehicle.status}{vehicle.rank ? ' · Rank #' + vehicle.rank : ''}</p><h1 class="text-3xl font-bold sm:text-5xl">{vehicle.year || 'Year TBD'} {vehicle.title}</h1><p class="mt-3 text-3xl font-bold">{vehicle.priceJmd ? money(vehicle.priceJmd) : 'Price TBD'}</p></div>
+      <div><p class="mb-2 text-xs font-bold uppercase tracking-widest text-amber-400">{vehicle.status}{vehicle.rank ? ' · Rank #' + vehicle.rank : ''} · {vehicle.availability === 'sold' ? 'Sold' : vehicle.availability === 'expired' ? 'Expired advertisement' : vehicle.availability === 'dealer-catalogue' ? 'Dealer catalogue' : 'Availability unconfirmed'}</p><h1 class="text-3xl font-bold sm:text-5xl">{vehicle.year || 'Year TBD'} {vehicle.title}</h1><p class="mt-3 text-3xl font-bold">{vehicle.priceJmd ? money(vehicle.priceJmd) : 'Price TBD'}</p></div>
       {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="rounded-lg bg-amber-400 px-5 py-3 font-semibold text-zinc-950">{vehicle.sourceKind === 'dealer-catalogue' ? 'Dealer inventory ↗' : 'Original listing ↗'}</a>{/if}
     </div>
     {#if image?.cover}
@@ -28,6 +28,7 @@
         <figcaption class="px-4 py-2 text-xs text-zinc-400">Original listing photograph · Verify vehicle identity with seller</figcaption>
       </figure>
     {/if}
+    <section class="mt-6 rounded-xl border border-zinc-800 bg-zinc-900 p-5"><h2 class="font-semibold">Availability verification</h2><p class="mt-2 text-sm text-zinc-400">Last recorded check: {vehicle.availabilityCheckedAt ?? 'Not checked'} · Evidence: {vehicle.availabilityEvidence?.replaceAll('-', ' ') ?? 'Not recorded'}. Opening an advertisement does not confirm seller inventory.</p>{#if vehicle.availabilityHistory?.length}<ul class="mt-3 space-y-2 text-sm text-zinc-400">{#each vehicle.availabilityHistory as event}<li>{event.date}: {event.status} — {event.note}</li>{/each}</ul>{/if}</section>
     <div class="mt-8 grid gap-4 sm:grid-cols-3">
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Mileage</p><p class="mt-2 text-xl font-semibold">{vehicle.mileageKm ? vehicle.mileageKm.toLocaleString() + ' km' : 'Unknown'}</p></div>
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Drivetrain</p><p class="mt-2 text-xl font-semibold">{vehicle.drivetrain ?? 'Unconfirmed'}</p></div>
