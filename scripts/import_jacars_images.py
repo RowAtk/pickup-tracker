@@ -112,6 +112,7 @@ def main():
     }.items():
         if ranked_id not in existing and old_id in existing:
             existing[ranked_id] = existing[old_id]
+    outcomes = []
     for vid, url in records:
         host = (urllib.parse.urlparse(url).hostname or "").lower()
         if host not in ("jacars.net", "www.jacars.net"):
