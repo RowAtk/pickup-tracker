@@ -7,6 +7,7 @@ on:
     paths:
       - 'src/lib/data/vehicles.ts'
       - 'scripts/import_jacars_images.py'
+      - 'scripts/report_vehicle_quality.py'
       - '.github/workflows/cache-listing-images.yml'
 permissions:
   contents: write
@@ -39,6 +40,16 @@ jobs:
           PY
       - name: Retrieve and cache listing images
         run: python scripts/import_jacars_images.py
+      - name: Audit data completeness
+        if: always()
+        run: python scripts/report_vehicle_quality.py
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pickup-data-quality
+          path: reports/vehicle-quality.json
+          if-no-files-found: warn
       - name: Commit cached photos and manifest
         run: |
           git config user.name "github-actions[bot]"
