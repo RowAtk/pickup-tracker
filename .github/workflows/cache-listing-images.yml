@@ -21,6 +21,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify runner can reach listing and image hosts
+        run: |
+          python - <<'PY'
+          import socket, urllib.request
+          hosts = ['www.jacars.net', 'www.google.com']
+          for host in hosts:
+              addresses = socket.getaddrinfo(host, 443)
+              print(f'{host}: DNS OK ({len(addresses)} results)')
+          url = 'https://www.jacars.net/adv/2523078_ford-ranger-3-2l-2019/'
+          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; PickupTracker/1.0)'})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              sample = response.read(200000)
+              print(f'Listing HTTP {response.status}, bytes read {len(sample)}')
+              if response.status != 200 or len(sample) < 1000:
+                  raise RuntimeError('Listing source is not usable')
+          PY
       - name: Retrieve and cache listing images
         run: python scripts/import_jacars_images.py
       - name: Commit cached photos and manifest
