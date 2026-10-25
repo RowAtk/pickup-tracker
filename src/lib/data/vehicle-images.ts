@@ -20,4 +20,5 @@ export const vehicleImages: Record<string, { cover: string; gallery?: string[]; 
   "wildtrak-2021-other": { cover: "/vehicles/wildtrak-2021-other/cover.webp", credit: 'Original listing photograph' },
   "wildtrak-2022": { cover: "/vehicles/wildtrak-2022/cover.webp", credit: 'Original listing photograph' },
   "xlt-2022": { cover: "/vehicles/xlt-2022/cover.webp", credit: 'Original listing photograph' },
+  "ranger-2019-2529367": { cover: "/vehicles/ranger-2019-2529367/photo-01.webp", gallery: ["/vehicles/ranger-2019-2529367/photo-02.webp","/vehicles/ranger-2019-2529367/photo-03.webp","/vehicles/ranger-2019-2529367/photo-04.webp","/vehicles/ranger-2019-2529367/photo-05.webp","/vehicles/ranger-2019-2529367/photo-06.webp","/vehicles/ranger-2019-2529367/photo-07.webp","/vehicles/ranger-2019-2529367/photo-08.webp","/vehicles/ranger-2019-2529367/photo-09.webp"], credit: 'Original Jacars listing 2529367 photographs' },
 };

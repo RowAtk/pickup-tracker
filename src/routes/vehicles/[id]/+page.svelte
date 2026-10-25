@@ -35,6 +35,19 @@
         <figcaption class="px-4 py-2 text-xs text-zinc-400">Original listing photograph · Verify vehicle identity with seller</figcaption>
       </figure>
     {/if}
+    {#if image?.gallery?.length}
+      <section class="mt-4" aria-label="Listing photo gallery">
+        <h2 class="mb-3 text-lg font-semibold">Listing photos</h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {#each image.gallery as photo, index}
+            <a href={photo} target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 focus-visible:outline-2 focus-visible:outline-amber-400" aria-label={`Open listing photo ${index + 2} in a new tab`}>
+              <img src={photo} alt={`Listing photo ${index + 2} of ${vehicle.year} ${vehicle.title}`} loading="lazy" class="aspect-[4/3] w-full object-contain" />
+            </a>
+          {/each}
+        </div>
+        <p class="mt-2 text-xs text-zinc-400">Select a photo to view it at full size. Specification sheets contain seller-provided information.</p>
+      </section>
+    {/if}
     <section class="mt-6 rounded-xl border border-zinc-800 bg-zinc-900 p-5"><h2 class="font-semibold">Availability verification</h2><p class="mt-2 text-sm text-zinc-400">Last recorded check: {vehicle.availabilityCheckedAt ?? 'Not checked'} · Evidence: {vehicle.availabilityEvidence?.replaceAll('-', ' ') ?? 'Not recorded'}. Opening an advertisement does not confirm seller inventory.</p>{#if vehicle.availabilityHistory?.length}<ul class="mt-3 space-y-2 text-sm text-zinc-400">{#each vehicle.availabilityHistory as event}<li>{event.date}: {event.status} — {event.note}</li>{/each}</ul>{/if}</section>
     <div class="mt-8 grid gap-4 sm:grid-cols-3">
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Mileage</p><p class="mt-2 text-xl font-semibold">{vehicle.mileageKm ? vehicle.mileageKm.toLocaleString() + ' km' : 'Unknown'}</p></div>
