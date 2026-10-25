@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { onMount, tick } from 'svelte';
+  import { afterNavigate, beforeNavigate, disableScrollHandling } from '$app/navigation';
+
   import { vehicles } from '$lib/data/vehicles';
   import { vehicleImages } from '$lib/data/vehicle-images';
   let view = $state<'all' | 'shortlist' | 'watchlist'>('all');
@@ -7,6 +10,63 @@
   let showUnavailable = $state(false);
   const money = (n: number) => n ? 'J$' + new Intl.NumberFormat('en-JM').format(n) : 'Price TBD';
   let visible = $derived(vehicles.filter(v => (showUnavailable || (v.availability !== 'sold' && v.availability !== 'expired')) && (view === 'all' || v.status === view) && (v.title + ' ' + v.notes).toLowerCase().includes(search.toLowerCase())).sort((a,b) => sort === 'price' ? (a.priceJmd || Infinity) - (b.priceJmd || Infinity) : sort === 'year' ? b.year - a.year : (a.rank ?? 99) - (b.rank ?? 99)));
+
+  const browsingStateKey = 'pickup-tracker:browsing:v1';
+  let restored = $state(false);
+  let active = true;
+
+  function saveBrowsingState() {
+    if (!restored) return;
+    try {
+      sessionStorage.setItem(browsingStateKey, JSON.stringify({
+        view, search, sort, showUnavailable, scrollY: window.scrollY
+      }));
+    } catch {
+      // Browsing remains usable when browser storage is unavailable.
+    }
+  }
+
+  beforeNavigate(saveBrowsingState);
+  onMount(() => {
+    window.addEventListener('pagehide', saveBrowsingState);
+    return () => {
+      active = false;
+      window.removeEventListener('pagehide', saveBrowsingState);
+    };
+  });
+
+  afterNavigate(() => {
+    if (restored) return;
+    let saved: Record<string, unknown> | null = null;
+    try {
+      const value = JSON.parse(sessionStorage.getItem(browsingStateKey) ?? 'null');
+      if (value && typeof value === 'object' && !Array.isArray(value)) saved = value;
+    } catch {
+      // Ignore invalid or inaccessible saved data.
+    }
+    if (saved) {
+      if (saved.view === 'all' || saved.view === 'shortlist' || saved.view === 'watchlist') view = saved.view;
+      if (typeof saved.search === 'string') search = saved.search;
+      if (saved.sort === 'rank' || saved.sort === 'price' || saved.sort === 'year') sort = saved.sort;
+      if (typeof saved.showUnavailable === 'boolean') showUnavailable = saved.showUnavailable;
+      const scrollY = typeof saved.scrollY === 'number' && Number.isFinite(saved.scrollY)
+        ? Math.max(0, saved.scrollY) : 0;
+      // Restore the filtered list before restoring its scroll offset, including
+      // when the detail page's dashboard link creates a fresh navigation.
+      disableScrollHandling();
+      void tick().then(() => {
+        requestAnimationFrame(() => {
+          if (active) window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' });
+        });
+      });
+    }
+    restored = true;
+  });
+
+  $effect(() => {
+    // Persist control changes even when an external advert opens in another tab.
+    if (restored) saveBrowsingState();
+  });
 </script>
 <svelte:head><title>Pickup Tracker | Jamaica</title><meta name="description" content="Pickup truck shortlist, watchlist and purchase research." /></svelte:head>
 <div class="min-h-screen bg-zinc-950 text-zinc-100">
