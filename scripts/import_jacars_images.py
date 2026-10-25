@@ -90,11 +90,15 @@ def main():
     source = DATA.read_text()
     records = []
     for line in source.splitlines():
-        id_match = re.search(r"\\bid:\\s*['\\\"]([^'\\\"]+)['\\\"]", line)
-        url_match = re.search(r"\\blistingUrl:\\s*['\\\"](https?[^'\\\"]+)['\\\"]", line)
+        if "listingUrl:" not in line or "id:" not in line:
+            continue
+        id_match = re.search(r"id:\s*['\"]([^'\"]+)['\"]", line)
+        url_match = re.search(r"listingUrl:\s*['\"](https?[^'\"]+)['\"]", line)
         if id_match and url_match:
             records.append((id_match.group(1), url_match.group(1)))
     print(f"Found {len(records)} vehicles with URLs", flush=True)
+    if not records:
+        raise RuntimeError("No vehicle URLs parsed: aborting image sweep rather than reporting false success")
     existing = {}
     if MANIFEST.exists():
         for vid, path in re.findall(r"""['"]([^'"]+)['"]:\s*\{\s*cover:\s*['"]([^'"]+)['"]""", MANIFEST.read_text()):
