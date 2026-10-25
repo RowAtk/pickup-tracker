@@ -41,3 +41,23 @@ for r in records:
         print(r["id"] + ": " + ", ".join(r["missing"]))
 if any("validPrice" in r["missing"] for r in records):
     raise RuntimeError("One or more prices missing or invalid")
+
+summary = root / "reports" / "vehicle-quality.md"
+lines = [
+    "# Pickup tracker data quality",
+    "",
+    f"Audited: {report['generated_at']}",
+    f"Vehicles: {report['total']}",
+    f"Matched cached images: {report['cached_images']}/{report['total']}",
+    f"Missing cached images: {report['total'] - report['cached_images']}",
+    "",
+    "| Vehicle ID | Missing fields |",
+    "| --- | --- |",
+]
+for record in records:
+    lines.append(f"| {record['id']} | {', '.join(record['missing']) or 'None'} |")
+summary.write_text("\\n".join(lines) + "\\n")
+import os
+if os.environ.get("GITHUB_STEP_SUMMARY"):
+    with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as handle:
+        handle.write(summary.read_text())
