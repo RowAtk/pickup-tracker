@@ -84,7 +84,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No dated service records, accident history, import history or ownership chain are supplied. A clean cabin/engine bay and low displayed mileage do not establish maintenance quality. Seek chronological records and compare mileages.",
     "ownershipFit": "Automatic transmission and diesel torque suit commuting and the climb home; 4WD adds flexibility but tyre condition matters on wet roads. Test cooling and gearbox behaviour on a sustained hill. The seven-year calendar age remains relevant despite the low odometer.",
-    "comparison": "J$690,000 more than #5, with 78,315 km less advertised use. It is J$1.21M cheaper than the 2021 Wildtrak (#3), with 6,625 km less, although two model years older. The mileage advantage earns priority only if the history supports it.",
+    "comparison": "J$690,000 more than #4, with 78,315 km less advertised use. It is J$1.21M cheaper than the 2021 Wildtrak (#3), with 6,625 km less, although two model years older. The mileage advantage earns priority only if the history supports it.",
     "inspection": [
       "Verify VIN/build sheet, original market, model year and genuine Wildtrak specification with KIG; ask why the grille was changed",
       "Obtain invoices for engine oil, fuel filters, cooling-system work, transmission and differential/transfer-case servicing; match dates and odometer readings",
@@ -229,7 +229,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No invoices or service book supplied. Well-maintained wording is a claim, not documentation. Ask for dealer history, diesel-system maintenance and transmission-fluid records.",
     "ownershipFit": "Good fit for a daily commute and hills: automatic/RHD, useful diesel torque and a newer calendar year. Cloth seats are not a disadvantage if comfort and running condition are good.",
-    "comparison": "J$1.01M above #1 for a vehicle four model years newer and only 2,206 km more advertised mileage. J$300,000 above #4 while showing 49,000 km less; that premium is worth testing against actual histories.",
+    "comparison": "J$1.01M above #1 for a vehicle four model years newer and only 2,206 km more advertised mileage. J$300,000 above #5 while showing 49,000 km less; that premium is worth testing against actual histories.",
     "inspection": [
       "VIN-confirm year, 2.5L engine and actual XE equipment/drivetrain",
       "Obtain service and accident/ownership records; cross-check odometer chronology",
@@ -407,7 +407,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "dealer-serviced-2529403": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 11 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Retain #4 provisionally. Photos resolve the automatic/RHD and support 4WD; its claimed dealer history is the main reason to investigate further.",
+    "verdict": "Retain #5 provisionally. Photos resolve the automatic/RHD and support 4WD; its claimed dealer history is the main reason to investigate further.",
     "specifications": [
       {
         "label": "Year",
@@ -516,7 +516,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "ranger-2019-2529367": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 9 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Keep #5 provisionally. Its J$3.8M price is a persuasive value case, but 130,109 km without service documentation leaves a larger maintenance uncertainty than #1.",
+    "verdict": "Keep #4 provisionally. Its J$3.8M price is a persuasive value case, but 130,109 km without service documentation leaves a larger maintenance uncertainty than #1.",
     "specifications": [
       {
         "label": "Year",
@@ -619,7 +619,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "f150-2017": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 6 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Value-priced but a weaker overall match than the diesel/RHD midsize pickups. Keep #6 as a conditional alternative, with substantial running-cost and finance checks.",
+    "verdict": "Moved to the watchlist. The low purchase price is attractive, but age-related financing eligibility, full-size dimensions, LHD and petrol running costs weaken its fit against the ranked contenders.",
     "specifications": [
       {
         "label": "Year",
@@ -678,7 +678,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No service invoices supplied. The advert does not establish whether the 3.5L is the naturally aspirated or EcoBoost version, nor the exact transmission; VIN identification comes before model-specific maintenance conclusions.",
     "ownershipFit": "Low purchase price helps, but full-size dimensions, LHD sightlines and petrol consumption need a realistic commute/parking test. A cheap payment does not measure fuel, insurance, tyres or repairs.",
-    "comparison": "J$1M cheaper than #5, but nine calendar years old in 2026, outside your previously stated seven-year vehicle-loan limit. Any five-year payment shown is illustrative, not an eligibility promise.",
+    "comparison": "J$1M cheaper than #4, but nine calendar years old in 2026, outside your previously stated seven-year vehicle-loan limit. Any five-year payment shown is illustrative, not an eligibility promise.",
     "inspection": [
       "Decode VIN for exact engine, gearbox, original market and trim; inspect import/title history",
       "Cold-start and hot road test; scan all modules, check cooling, leaks and gear changes",
@@ -727,7 +727,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "frontier-midnight-2019": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 5 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Retain #7 as a lower-price petrol alternative. It needs configuration and import-history checks before being compared as an equivalent to diesel/RHD Frontiers.",
+    "verdict": "Retain #8 as a lower-price petrol alternative. It needs configuration and import-history checks before being compared as an equivalent to diesel/RHD Frontiers.",
     "specifications": [
       {
         "label": "Year",
@@ -766,7 +766,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No documented servicing. One local owner does not establish pre-import history or accident-free status.",
     "ownershipFit": "Lower cost and automatic transmission are attractive, but LHD and petrol running costs are compromises for your Jamaican commute. Confirm the actual drivetrain before attributing hill/off-road capability.",
-    "comparison": "J$300,000 below #5 and 22,109 km less advertised mileage; those savings must be weighed against petrol/LHD configuration and history. It reaches eight calendar years in 2027.",
+    "comparison": "J$300,000 below #4 and 22,109 km less advertised mileage; those savings must be weighed against petrol/LHD configuration and history. It reaches eight calendar years in 2027.",
     "inspection": [
       "VIN-confirm original market, SV/Midnight specification, engine, gearbox and drivetrain",
       "Obtain import/title records and check damage history through original-market records where available",
@@ -811,7 +811,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "wildtrak-2017": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 15 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Keep #9 at low priority pending corrections. At J$3.83M it offers little price advantage over the newer #5 Ranger, while the advert has material data inconsistencies.",
+    "verdict": "Moved to the watchlist. At J$3.83M it costs J$30,000 more than the newer 2019 Ranger XLT now ranked #4, while mileage/engine data inconsistencies and financing age remain unresolved.",
     "specifications": [
       {
         "label": "Year",
@@ -875,7 +875,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No service documentation shown. Treat the 148,000-km figure as historical, not freshly verified. The 0-km field is not meaningful used-vehicle mileage.",
     "ownershipFit": "Equipment is appealing, but older age and uncertain specifications make it a less straightforward financing/maintenance choice.",
-    "comparison": "J$30,000 more than #5 despite being two model years older. It is nine calendar years old in 2026, beyond your previous seven-year vehicle-loan boundary; a trim badge does not overcome that.",
+    "comparison": "J$30,000 more than #4 despite being two model years older. It is nine calendar years old in 2026, beyond your previous seven-year vehicle-loan boundary; a trim badge does not overcome that.",
     "inspection": [
       "Get a current odometer photo and VIN/engine identification to resolve 0 km and 3.4L fields",
       "Request dated service, gearbox and cooling records",
@@ -960,7 +960,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "dmax-2015": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 12 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "Keep #10 as an older value option. The price is now J$3.5M, and the seller offers a potentially useful service record, but age remains a financing obstacle.",
+    "verdict": "Moved to the watchlist. The J$3.5M price and claimed service documentation merit retaining the lead, but eleven-year calendar age and financing limitations prevent shortlist priority.",
     "specifications": [
       {
         "label": "Year",
@@ -1000,7 +1000,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "The documented-service claim is more specific than generic well-maintained wording. Request clear scans and supporting invoices; nothing in this review authenticates the book.",
     "ownershipFit": "Automatic diesel/RHD is a good configuration. Eleven calendar years of age means rubber, cooling and suspension condition still matter even if the low mileage is genuine.",
-    "comparison": "J$300,000 below #5 with 51,334 km less advertised use, but four model years older. Outside your previously stated vehicle-loan age limit; low mileage does not restore eligibility.",
+    "comparison": "J$300,000 below #4 with 51,334 km less advertised use, but four model years older. Outside your previously stated vehicle-loan age limit; low mileage does not restore eligibility.",
     "inspection": [
       "Photograph service-book pages and invoices, compare mileages and verify VIN/ownership",
       "Cold-start and diesel diagnostics; inspect cooling, leaks and transmission changes",
@@ -1227,7 +1227,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No repair/overhaul or routine service history supplied. At this mileage, documentation of major work and current diagnostics are essential; do not infer a rebuild has occurred.",
     "ownershipFit": "Potentially expensive downtime is poorly aligned with your preference for a truck you can use consistently. Twelve calendar years old and outside your previous vehicle-loan boundary.",
-    "comparison": "J$1.45M below #5, but approximately 165,267 km more advertised use and five model years older. A smaller loan is not sufficient compensation for unknown repair needs.",
+    "comparison": "J$1.45M below #4, but approximately 165,267 km more advertised use and five model years older. A smaller loan is not sufficient compensation for unknown repair needs.",
     "inspection": [
       "Resolve fuel/engine identity and VIN; ask for all known faults and reason for as-is sale in writing",
       "Independent compression/engine assessment where indicated, diagnostic scan, cooling pressure test and hot gearbox evaluation",
@@ -1773,7 +1773,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
   "triton-2025": {
     "checkedAt": "2026-10-24",
     "coverage": "Original Jacars advert text and all 11 listing photos reviewed. Photos support visible details only; no physical or diagnostic inspection.",
-    "verdict": "A credible higher-budget contender: much newer and low stated mileage. Worth investigating if J$7M is affordable without exhausting repair/emergency reserves.",
+    "verdict": "Rank #6 provisionally as a higher-budget contender. J$7M and 13,893 advertised km warrant shortlist status, subject to verifying service records, warranty, exact trim and affordability.",
     "specifications": [
       {
         "label": "Year",
@@ -2278,7 +2278,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No freshly accessible service or repair evidence. Historical mileage and specifications have not been independently re-established.",
     "ownershipFit": "Age and your previously stated loan limit make it a weak financing match even if a different similar truck becomes available.",
-    "comparison": "Historical J$3.3M is J$500,000 below #5, but the vehicle is four model years older and no longer a live contender.",
+    "comparison": "Historical J$3.3M is J$500,000 below #4, but the vehicle is four model years older and no longer a live contender.",
     "inspection": [
       "Only if a new resale appears: establish VIN, seller authority and current availability first",
       "Request new service records/current odometer and repeat a full mechanical/chassis inspection",
@@ -2437,7 +2437,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "No service invoices, timing-drive service proof, cooling repair history or documented modification work supplied.",
     "ownershipFit": "The styling clearly appeals to you, and cash exposure is lower. Seventeen calendar years of age and unknown modifications conflict with the goal of avoiding repeated repair/downtime.",
-    "comparison": "J$1.61M below #5, but ten model years older. Far outside your previous vehicle-loan age limit; a small financed balance is not proof that a secured vehicle loan is available.",
+    "comparison": "J$1.61M below #4, but ten model years older. Far outside your previous vehicle-loan age limit; a small financed balance is not proof that a secured vehicle loan is available.",
     "inspection": [
       "Obtain VIN, engine identity, actual odometer and proof of manual/4WD configuration",
       "Inspect under coating/wrap, inside bed, chassis and repair seams for corrosion/hidden damage",
@@ -2494,7 +2494,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     ],
     "serviceHistory": "New-vehicle status is a catalogue claim. Exact model year, warranty, service inclusions and stock need a written dealer order/quote.",
     "ownershipFit": "Warranty and low acquisition price could reduce uncertainty compared with an old truck, but test the manual in stop/start traffic and on the climb home. Parts lead times and warranty handling deserve concrete answers.",
-    "comparison": "J$510,000 above #1 and J$1.2M above #5. It is also J$1.999M below Rely R8, but not established as an equivalent automatic/4WD specification.",
+    "comparison": "J$510,000 above #1 and J$1.2M above #4. It is also J$1.999M below Rely R8, but not established as an equivalent automatic/4WD specification.",
     "inspection": [
       "Get a VIN-specific quote confirming year, engine, drivetrain, RHD, cab/seats and delivered price",
       "Read written warranty/exclusions, required servicing, labour/parts coverage and service-package limits",
