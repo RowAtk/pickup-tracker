@@ -3298,5 +3298,151 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
         "url": "https://cdn2.jacars.net/media/cache/9c/4f/9c4fc5d41575d1ebabc9dd0a787f6b56.webp"
       }
     ]
+  },
+  "triton-athlete-2020-2528785": {
+    "checkedAt": "2026-10-25",
+    "coverage": "Original Jacars advert and all 16 listing photographs reviewed. No seller contact, physical/diagnostic inspection or service-record verification performed. Missing public vehicle identity numbers are not treated as a listing defect.",
+    "verdict": "Lower-priority watchlist comparison at J$6.9M. Attractive Athlete equipment and appearance, but mileage is absent and the 2025 Triton already shortlisted at #6 is only J$100,000 dearer with 13,893 advertised km. A substantial price improvement or unusually strong individual condition/history is needed to justify this older unit.",
+    "specifications": [
+      {
+        "label": "Model / year",
+        "value": "2020 Mitsubishi Triton Athlete",
+        "basis": "Seller description; orange/black Athlete-style trim and graphics pictured"
+      },
+      {
+        "label": "Price / location",
+        "value": "J$6,900,000 negotiable / Saint Elizabeth",
+        "basis": "Global Vision Motor Sales original advert"
+      },
+      {
+        "label": "Mileage",
+        "value": "Unknown",
+        "basis": "Not stated in advert or structured data; no clearly readable odometer in the 16 supplied photographs"
+      },
+      {
+        "label": "Engine / fuel",
+        "value": "2.4L turbo diesel advertised",
+        "basis": "Current page title, engine field and description say 2.4L despite the older 2.5L wording in the supplied URL"
+      },
+      {
+        "label": "Transmission / steering",
+        "value": "Automatic / RHD",
+        "basis": "Advert and cabin photos. Exact automatic gear count not independently established"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "4WD advertised; rotary 4WD selector pictured",
+        "basis": "Advert/photo 9. Exact system and operating modes require demonstration"
+      },
+      {
+        "label": "Body / seats",
+        "value": "Orange double cab / five advertised seats",
+        "basis": "Advert and exterior/interior photographs"
+      }
+    ],
+    "sellerClaims": [
+      "Dealer advertises newly imported 2020 Athlete, 2.4L turbo diesel, automatic 4WD/RHD and J$6.9M negotiable.",
+      "Seller lists keyless/push start, paddle shifters, cruise, traction/hill-descent controls, power seat/mirrors, orange leather trim, 8-inch multimedia with phone integration, blind-spot monitoring, collision sensors, cameras including 360 view, rear differential lock, side steps and roof rails. Equipment operation and factory fitment have not been verified.",
+      "Complimentary fitness, service, buff/polish and valuation are advertised. These inclusions are not a warranty or evidence of previous servicing."
+    ],
+    "photoFindings": [
+      "All 16 photos show an orange/black double cab with Athlete-style graphics, black wheels, wheel-arch flares, side steps, roof rails, sports bar, lined bed and retractable/roll-top bed cover.",
+      "Photos 9–14 support RHD, an automatic shifter, rotary 4WD control, black/orange seating, a touchscreen-style head unit, dual-zone climate panel and push-start button. Steering-wheel cruise/audio controls and paddle-style controls are pictured.",
+      "The seat surfaces are partly covered in clear plastic. This can limit inspection of upholstery and does not establish a new vehicle, low mileage or lack of wear.",
+      "The instrument cluster is visible in cabin photographs but the odometer is not clearly readable. The displayed 364-km figure in photo 9 is alongside a fuel/range display and must not be recorded as mileage.",
+      "The rotary 4WD dial is consistent with the more capable multi-mode layout seen on Super Select-equipped Tritons, but exact labels/hardware and functioning centre/rear locks should be confirmed in person. Do not replace the actual unit evidence with specifications of a newer Athlete.",
+      "No engine-bay, underside, service invoice or export/auction history is included. Photographs do not establish accident-free status or mechanical health."
+    ],
+    "serviceHistory": "No mileage, dated maintenance, original-market history or accident/repair documentation is supplied. Newly imported status makes export/inspection and pre-import service records useful. Ask exactly what the free service includes and obtain evidence of work performed; a fresh oil change is not a substitute for prior maintenance records.",
+    "ownershipFit": "Automatic diesel/RHD, comfort equipment and 4WD are suitable in principle for commuting and the hill. Styling may appeal, but at this price the shorter loan term creates a larger monthly commitment than the newer shortlisted Triton. Test cooling and automatic shifts on an incline, and assess tyre noise/ride and all cameras/driver aids.",
+    "comparison": "J$100,000 below #6's 2025 Triton at J$7M/13,893 km, despite being five model years older with unknown mileage. J$1.2M above #3's 2021 Wildtrak at J$5.7M/58,419 km and J$1.4M above #2's 2023 Frontier at J$5.5M/54,000 km. Under the supplied term rules, as of 2026 a 2020 unit gets five years versus seven for a 2025 unit. With J$2M down and 3%, this is approximately J$88,047/month before fees/insurance, above the J$75K target. Current rankings remain unchanged.",
+    "inspection": [
+      "Before travelling, request a clear current odometer photograph, servicing invoices, original-market/export/inspection history and accident/repair disclosure. Missing mileage is the immediate information gap.",
+      "Clarify actual Athlete equipment and 4WD system; demonstrate correct mode changes and any claimed rear lock on an appropriate surface. Compare the vehicle and paperwork at viewing.",
+      "Independent cold-start and hot road test, module scan, injector/turbo checks as indicated, cooling pressure test and automatic-gearbox assessment including a sustained incline.",
+      "Inspect frame/underbody, corrosion, repair seams, suspension, brakes, tyre dates and wheel fitment. Check under protective seat plastic and floor coverings rather than judging presentation alone.",
+      "Demonstrate 360/reverse cameras, blind-spot/collision functions, parking sensors, CarPlay/Android Auto, A/C, power seats, both keys and tonneau operation. Separate aftermarket features from original equipment.",
+      "Get an itemised description of free service/fitness/valuation and any actual written warranty; confirm title/import paperwork, final delivered price and stock.",
+      "Obtain a comparable quote/history for the 2025 shortlisted Triton and compare the total finance burden before accepting an older premium trim at nearly the same price."
+    ],
+    "unknowns": [
+      "Current mileage and dated service history",
+      "Original-market/import and accident/repair background",
+      "Exact Athlete equipment, 4WD system and functioning driver aids",
+      "Actual mechanical condition, warranty and free-service scope",
+      "Negotiated price and seller-confirmed availability"
+    ],
+    "sources": [
+      {
+        "label": "Original Jacars advert 2528785 (directly retrieved)",
+        "url": "https://www.jacars.net/adv/2528785_mitsubishi-triton-l200-2-5l-2020/"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Listing photo 1",
+        "url": "https://cdn2.jacars.net/media/cache/55/50/55506f6cb05cf3b5e68fcf092a48b30a.webp"
+      },
+      {
+        "label": "Listing photo 2",
+        "url": "https://cdn2.jacars.net/media/cache/64/9d/649d62dca87778adb06188b8dd339fae.webp"
+      },
+      {
+        "label": "Listing photo 3",
+        "url": "https://cdn2.jacars.net/media/cache/d4/ee/d4ee1dbd5827e7959e0816f84efd9490.webp"
+      },
+      {
+        "label": "Listing photo 4",
+        "url": "https://cdn2.jacars.net/media/cache/b1/bf/b1bfb5fd2c2bf81877c0595d2ae40f8f.webp"
+      },
+      {
+        "label": "Listing photo 5",
+        "url": "https://cdn2.jacars.net/media/cache/44/cf/44cfd541482b016343eb366dcbc67d68.webp"
+      },
+      {
+        "label": "Listing photo 6",
+        "url": "https://cdn2.jacars.net/media/cache/38/de/38def7bda9bca633cbb6fdee47684e44.webp"
+      },
+      {
+        "label": "Listing photo 7",
+        "url": "https://cdn2.jacars.net/media/cache/f0/7e/f07e334e991fc7ad166e173ae40ff646.webp"
+      },
+      {
+        "label": "Listing photo 8",
+        "url": "https://cdn2.jacars.net/media/cache/1b/b7/1bb7a0b712b73e7c5e5b329146087e5e.webp"
+      },
+      {
+        "label": "Listing photo 9",
+        "url": "https://cdn2.jacars.net/media/cache/60/04/6004e51507f2d1bd69a2df0277e90948.webp"
+      },
+      {
+        "label": "Listing photo 10",
+        "url": "https://cdn2.jacars.net/media/cache/1d/6b/1d6b553efd2a54388b11bbcc996cc54f.webp"
+      },
+      {
+        "label": "Listing photo 11",
+        "url": "https://cdn2.jacars.net/media/cache/85/9d/859db71eaff56b3db4b439838e3a50b3.webp"
+      },
+      {
+        "label": "Listing photo 12",
+        "url": "https://cdn2.jacars.net/media/cache/91/cb/91cbe10793ad0773da994d2353ca0552.webp"
+      },
+      {
+        "label": "Listing photo 13",
+        "url": "https://cdn2.jacars.net/media/cache/7b/9a/7b9a8ef6525700e78c1461fbd06c8ac5.webp"
+      },
+      {
+        "label": "Listing photo 14",
+        "url": "https://cdn2.jacars.net/media/cache/3d/d7/3dd714f9ca1836090c706d5c57a2f7cc.webp"
+      },
+      {
+        "label": "Listing photo 15",
+        "url": "https://cdn2.jacars.net/media/cache/b4/62/b46231661cb2fd8e4055876c23758722.webp"
+      },
+      {
+        "label": "Listing photo 16",
+        "url": "https://cdn2.jacars.net/media/cache/9a/2b/9a2b62ec0aa1836acb2297b3092b647e.webp"
+      }
+    ]
   }
 };
