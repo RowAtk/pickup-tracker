@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte';
-  import { afterNavigate, beforeNavigate, disableScrollHandling } from '$app/navigation';
+  import { afterNavigate, beforeNavigate } from '$app/navigation';
 
   import { vehicles } from '$lib/data/vehicles';
   import { vehicleImages } from '$lib/data/vehicle-images';
@@ -16,7 +16,7 @@
   let active = true;
 
   function saveBrowsingState() {
-    if (!restored) return;
+    if (!restored || window.location.pathname !== '/') return;
     try {
       sessionStorage.setItem(browsingStateKey, JSON.stringify({
         view, search, sort, showUnavailable, scrollY: window.scrollY
@@ -35,8 +35,8 @@
     };
   });
 
-  afterNavigate(() => {
-    if (restored) return;
+  afterNavigate(({ to }) => {
+    if (restored || to?.url.pathname !== '/') return;
     let saved: Record<string, unknown> | null = null;
     try {
       const value = JSON.parse(sessionStorage.getItem(browsingStateKey) ?? 'null');
@@ -53,10 +53,9 @@
         ? Math.max(0, saved.scrollY) : 0;
       // Restore the filtered list before restoring its scroll offset, including
       // when the detail page's dashboard link creates a fresh navigation.
-      disableScrollHandling();
       void tick().then(() => {
         requestAnimationFrame(() => {
-          if (active) window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' });
+          if (active && window.location.pathname === '/') window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' });
         });
       });
     }
