@@ -9,6 +9,8 @@ on:
       - 'scripts/import_jacars_images.py'
       - 'scripts/report_vehicle_quality.py'
       - '.github/workflows/cache-listing-images.yml'
+      - 'package-lock.json'
+      - 'package.json'
 permissions:
   contents: write
 jobs:
@@ -27,7 +29,7 @@ jobs:
           node-version: '22'
       - name: Validate application build
         run: |
-          npm install --no-audit --no-fund
+          npm ci --no-audit --no-fund
           npm run build
       - name: Verify runner can reach listing and image hosts
         run: |
