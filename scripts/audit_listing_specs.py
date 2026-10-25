@@ -30,15 +30,15 @@ def parse_records(source):
         if "priceJmd:" not in line or "id:" not in line:
             continue
         def value(field):
-            m = re.search(r"\\b" + field + r":\\s*['\\\"]([^'\\\"]+)['\\\"]", line)
+            m = re.search(r"\b" + field + r":\s*['\\"]([^'\\"]+)['\\"]", line)
             return m.group(1) if m else None
         vid = value("id")
         if not vid:
             continue
-        missing = [field for field in ("mileageKm", "drivetrain", "transmission") if not re.search(r"\\b" + field + r":", line)]
+        missing = [field for field in ("mileageKm", "drivetrain", "transmission") if not re.search(r"\b" + field + r":", line)]
         if not missing:
             continue
-        rank = re.search(r"\\brank:\\s*(\\d+)", line)
+        rank = re.search(r"\brank:\s*(\d+)", line)
         result.append({"id": vid, "rank": int(rank.group(1)) if rank else None,
                        "url": value("listingUrl"), "missing": missing})
     return sorted(result, key=lambda x: (x["rank"] is None, x["rank"] or 999, x["id"]))
@@ -46,7 +46,7 @@ def parse_records(source):
 def inspect(item):
     url = item["url"]
     result = dict(item, status="not_checked", candidates={})
-    if not url or not re.match(r"^https://(?:www\\.)?jacars\\.net/adv/", url):
+    if not url or not re.match(r"^https://(?:www\.)?jacars\.net/adv/", url):
         result["status"] = "no_supported_individual_ad"
         return result
     try:
