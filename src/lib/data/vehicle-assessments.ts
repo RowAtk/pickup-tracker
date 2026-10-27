@@ -2553,7 +2553,7 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
     "sellerClaims": [
       "Fresh China Wheels inventory lists T60 manual at J$5M",
       "The old MAXUS inventory URL points visitors to /vehicles.html; this current page was checked",
-      "Dealer also lists a separate automatic T60 at J$5.79M; it is a comparison, not a new tracker entry"
+      "Separate T60 Automatic (J$5.79M) and T60 Max (J$7.4M) now have their own watchlist entries and assessments."
     ],
     "photoFindings": [
       "Dealer inventory uses manufacturer press imagery rather than photographs of an allocated VIN",
@@ -3509,6 +3509,246 @@ export const vehicleAssessments: Record<string, VehicleAssessment> = {
       {
         "label": "Listing photo 16",
         "url": "https://cdn2.jacars.net/media/cache/9a/2b/9a2b62ec0aa1836acb2297b3092b647e.webp"
+      }
+    ]
+  },
+  "maxus-t60-auto-2026": {
+    "checkedAt": "2026-10-26",
+    "coverage": "Current China Wheels model, inventory and service information plus all seven model images reviewed. Dealer catalogue and promotional evidence only; no stock confirmation, physical inspection or test drive.",
+    "verdict": "A strong new-automatic value comparison for the watchlist. Test alongside the used Frontier and Ranger leads before deciding whether a warranty-backed new vehicle justifies the higher purchase price.",
+    "specifications": [
+      {
+        "label": "Model year / condition",
+        "value": "2026 / new dealer catalogue; actual stock and delivery odometer unconfirmed",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "List price",
+        "value": "J$5,790,000; final on-road quote required",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Engine",
+        "value": "2.0L turbo diesel; 120 kW / 375 Nm",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Transmission",
+        "value": "8-speed automatic",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "4WD with rear differential lock",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Cab / load ratings",
+        "value": "Double cab; 1,005 kg payload; 3,000 kg braked towing",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Safety",
+        "value": "Six airbags; Bosch ESP 9.3",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      }
+    ],
+    "sellerClaims": [
+      "Dealer publishes the automatic separately from the J$5M manual; specifications are not interchangeable.",
+      "Local dealer advertises in-house servicing, genuine parts and model-trained technicians. Exact support performance is unverified."
+    ],
+    "photoFindings": [
+      "Seven dealer-page model images reviewed and imported; mixed colours and settings show these are illustrative, not one allocated vehicle.",
+      "Exterior, open load bed and infotainment imagery are included. A screen pictured in press material does not establish local equipment."
+    ],
+    "serviceHistory": "Advertised as new. Request pre-delivery inspection, storage/build dates, delivery odometer, warranty start date and service schedule. Dealer support claims are not an individual service record or a guarantee of parts lead times.",
+    "ownershipFit": "Automatic operation may suit traffic and hill starts better than the manual, while advertised 4WD offers practical utility. The moderate output is below the Max; assess overtaking, loaded hill performance and gearbox response on a test drive. Do not assume the Max’s ADAS or dual-screen equipment. At J$1.4M down, the tracker’s illustrative new-vehicle 102-month term gives about J$48,813/month at 3%, or J$60,248/month at 8.35%. Fees and insurance excluded; bank eligibility, new status and final price require confirmation.",
+    "comparison": "J$790,000 above the ranked J$5M T60 manual, J$290,000 above #2’s 2023 Frontier and J$90,000 above #3’s 2021 Wildtrak. J$1.61M cheaper than the T60 Max. A new-vehicle loan term can improve monthly affordability, but increases time in debt; compare total interest and depreciation too.",
+    "inspection": [
+      "Obtain a written quote itemising duties/taxes, registration, fees, accessories and delivery date.",
+      "Read warranty, exclusions, claim process and servicing obligations; price routine servicing and common wear parts.",
+      "Ask for actual parts stock and lead times for mechanical, body and electronic components.",
+      "Verify delivered specification, damage-free condition, tyres, spare, tools and pre-delivery checks.",
+      "Test cold start, hill starts, low-speed shift quality, braking and ride on the actual supplied tyre specification.",
+      "Have the dealer demonstrate 2H/4H/low range as fitted and differential-lock engagement safely.",
+      "Confirm financing eligibility and term with your bank using the final on-road price."
+    ],
+    "unknowns": [
+      "Written all-in price, current stock, build/model year and delivery timing",
+      "Exact Jamaican trim, RHD configuration, emissions equipment and supplied accessories",
+      "Written warranty duration/mileage, exclusions, servicing requirements and transfer terms",
+      "Service costs, parts availability/lead times and likely resale value"
+    ],
+    "sources": [
+      {
+        "label": "Local model specification and list price",
+        "url": "https://chinawheelsja.com/vehicles/t60.html"
+      },
+      {
+        "label": "Current local inventory comparison",
+        "url": "https://chinawheelsja.com/vehicles.html"
+      },
+      {
+        "label": "Dealer service and parts claims",
+        "url": "https://chinawheelsja.com/service.html"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Dealer model image 1",
+        "url": "https://chinawheelsja.com/images/v/t60-05-1600.webp"
+      },
+      {
+        "label": "Dealer model image 2",
+        "url": "https://chinawheelsja.com/images/v/t60-01-1600.webp"
+      },
+      {
+        "label": "Dealer model image 3",
+        "url": "https://chinawheelsja.com/images/v/t60-08-1600.webp"
+      },
+      {
+        "label": "Dealer model image 4",
+        "url": "https://chinawheelsja.com/images/v/t60-09-1600.webp"
+      },
+      {
+        "label": "Dealer model image 5",
+        "url": "https://chinawheelsja.com/images/v/t60-11-1600.webp"
+      },
+      {
+        "label": "Dealer model image 6",
+        "url": "https://chinawheelsja.com/images/v/t60-14-1600.webp"
+      },
+      {
+        "label": "Dealer model image 7",
+        "url": "https://chinawheelsja.com/images/v/t60-12-1600.webp"
+      }
+    ]
+  },
+  "maxus-t60-max-2026": {
+    "checkedAt": "2026-10-26",
+    "coverage": "Current China Wheels model, inventory and service information plus all seven model images reviewed. Dealer catalogue and promotional evidence only; no stock confirmation, physical inspection or test drive.",
+    "verdict": "A higher-cost new pickup benchmark with stronger performance and more equipment. Keep on the watchlist until the additional capability and warranty terms justify the premium for your use.",
+    "specifications": [
+      {
+        "label": "Model year / condition",
+        "value": "2026 / new dealer catalogue; delivery mileage and stock unconfirmed",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "List price",
+        "value": "J$7,400,000; final on-road quote required",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Engine",
+        "value": "2.0L twin-turbo diesel; 160 kW / 500 Nm",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Transmission",
+        "value": "ZF 8-speed automatic",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "Dealer uses all-wheel-drive wording; confirm transfer-case modes and differential locks",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Load ratings",
+        "value": "1,050 kg payload; 3,500 kg braked towing",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Size",
+        "value": "5,395 × 1,960 × 1,870 mm; 3,155 mm wheelbase",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Safety / technology",
+        "value": "Six airbags, ESP, ADAS and 360° camera; dual 12.3-inch displays, CarPlay/Android Auto, wireless charging",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      },
+      {
+        "label": "Comfort",
+        "value": "Heated seats, automatic climate control, keyless entry/start advertised",
+        "basis": "China Wheels local model page; catalogue claim, confirm supplied specification"
+      }
+    ],
+    "sellerClaims": [
+      "Dealer advertises stronger output and greater tow rating than the standard T60 Automatic. Confirm homologated ratings and fitted towing equipment.",
+      "A China Wheels social post advertises a six-year / 150,000 km warranty for T60 Max; obtain the current contract and exclusions before relying on it."
+    ],
+    "photoFindings": [
+      "Seven distinct T60 Max press images reviewed and imported, showing exterior, load bed and front/rear cabin; kept separate from standard T60 imagery.",
+      "The press cabin is left-hand drive. This does not establish steering side of Jamaican stock; require confirmation of the RHD vehicle and equipment being supplied.",
+      "Dual-screen dashboard and automatic-selector layout are pictured; no actual stock odometer, underbody or delivery condition is documented."
+    ],
+    "serviceHistory": "Advertised as new. Request pre-delivery inspection, storage/build dates, delivery odometer, warranty start date and service schedule. Dealer support claims are not an individual service record or a guarantee of parts lead times.",
+    "ownershipFit": "The extra 125 Nm and advertised towing capability may help loaded hill work, while the cabin is more modern. The J$1.61M premium is difficult to justify if the standard automatic meets your needs. Test driver aids, visibility, ride and screen controls; dual turbos and added electronics are additional systems to maintain, not proof of poor reliability. At J$1.4M down, the tracker’s illustrative new-vehicle 102-month term gives about J$66,715/month at 3%, or J$82,343/month at 8.35%. Fees and insurance excluded; bank eligibility, new status and final price require confirmation.",
+    "comparison": "J$1.61M above the standard T60 Automatic and J$2.4M above the manual. J$400,000 above #6’s 2025 Triton and J$1.9M above #2’s 2023 Frontier. The premium buys advertised extra performance and equipment; it does not establish better long-term reliability or resale.",
+    "inspection": [
+      "Obtain a written quote itemising duties/taxes, registration, fees, accessories and delivery date.",
+      "Read warranty, exclusions, claim process and servicing obligations; price routine servicing and common wear parts.",
+      "Ask for actual parts stock and lead times for mechanical, body and electronic components.",
+      "Verify delivered specification, damage-free condition, tyres, spare, tools and pre-delivery checks.",
+      "Test the actual RHD demonstrator on hills and rough roads; check low-speed gearbox response, braking and parking visibility.",
+      "Demonstrate each fitted ADAS function, 360° camera and phone integration; confirm calibration and warranty support.",
+      "Confirm exact 4WD modes, low range and lock equipment rather than relying on generic AWD wording.",
+      "Confirm financing eligibility and term with your bank using the final on-road price."
+    ],
+    "unknowns": [
+      "Written all-in price, current stock, build/model year and delivery timing",
+      "Exact Jamaican trim, RHD configuration, emissions equipment and supplied accessories",
+      "Written warranty duration/mileage, exclusions, servicing requirements and transfer terms",
+      "Service costs, parts availability/lead times and likely resale value"
+    ],
+    "sources": [
+      {
+        "label": "Local model specification and list price",
+        "url": "https://chinawheelsja.com/vehicles/t60-max.html"
+      },
+      {
+        "label": "Current local inventory comparison",
+        "url": "https://chinawheelsja.com/vehicles.html"
+      },
+      {
+        "label": "Dealer service and parts claims",
+        "url": "https://chinawheelsja.com/service.html"
+      },
+      {
+        "label": "Dealer social warranty promotion; confirm current written terms",
+        "url": "https://www.facebook.com/61570878805011/posts/122176876760695960/"
+      }
+    ],
+    "photoSources": [
+      {
+        "label": "Dealer model image 1",
+        "url": "https://chinawheelsja.com/images/v/t60maxleft-side-1600.webp"
+      },
+      {
+        "label": "Dealer model image 2",
+        "url": "https://chinawheelsja.com/images/v/t60maxfront-1600.webp"
+      },
+      {
+        "label": "Dealer model image 3",
+        "url": "https://chinawheelsja.com/images/v/t60maxrear-left-1600.webp"
+      },
+      {
+        "label": "Dealer model image 4",
+        "url": "https://chinawheelsja.com/images/v/t60maxdashboard-1600.webp"
+      },
+      {
+        "label": "Dealer model image 5",
+        "url": "https://chinawheelsja.com/images/v/t60maxcenter-console-1600.webp"
+      },
+      {
+        "label": "Dealer model image 6",
+        "url": "https://chinawheelsja.com/images/v/t60maxrear-2-1600.webp"
+      },
+      {
+        "label": "Dealer model image 7",
+        "url": "https://chinawheelsja.com/images/v/t60maxrear-seats-1600.webp"
       }
     ]
   }

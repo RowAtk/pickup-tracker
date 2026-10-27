@@ -36,7 +36,7 @@
     {#if image?.cover}
       <figure class="mt-8 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
         <img src={image.cover} alt={`Listing photograph of ${vehicle.year} ${vehicle.title}`} class="max-h-[520px] w-full object-contain" />
-        <figcaption class="px-4 py-2 text-xs text-zinc-400">Original listing photograph · Verify vehicle identity with seller</figcaption>
+        <figcaption class="px-4 py-2 text-xs text-zinc-400">{image.credit ?? 'Original listing photograph'} · {vehicle.sourceKind === 'dealer-catalogue' ? 'Illustrative model imagery; confirm local specification and available unit with dealer' : 'Verify vehicle identity with seller'}</figcaption>
       </figure>
     {/if}
     {#if image?.gallery?.length}
@@ -84,4 +84,5 @@
   {:else}<h1 class="text-2xl font-bold">Vehicle not found</h1><a href="/" class="mt-5 inline-block text-amber-400">Return to dashboard</a>{/if}
   </main>
 </div>
+
 
