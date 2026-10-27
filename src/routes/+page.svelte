@@ -8,7 +8,7 @@
   let search = $state('');
   let sort = $state<'rank' | 'price' | 'year'>('rank');
   let ranking = $state<'original' | 'long-term'>('original');
-  const longTermRanks: Record<string, number> = { 'frontier-2023': 1, 'maxus-t60-auto-2026': 2, 'wildtrak-2021': 3, 'ranger-top-2019': 4, 'dealer-serviced-2529403': 5, 'maxus-2026': 6, 'triton-2025': 7 };
+  const longTermRanks: Record<string, number> = { 'frontier-2023': 1, 'maxus-t60-auto-2026': 2, 'triton-2025': 3, 'dealer-serviced-2529403': 4, 'wildtrak-2021': 5, 'ranger-top-2019': 6, 'frontier-np300-2020-facebook': 7, 'l200-2021-facebook': 8, 'hilux-2021-facebook': 9, 'maxus-2026': 10 };
   const displayRank = (v: (typeof vehicles)[number]) => ranking === 'long-term' ? longTermRanks[v.id] : v.rank;
   let showUnavailable = $state(false);
   const money = (n: number) => n ? 'J$' + new Intl.NumberFormat('en-JM').format(n) : 'Price TBD';
@@ -87,7 +87,7 @@
       <div class="flex gap-2">{#each ['all','shortlist','watchlist'] as tab}<button onclick={() => view = tab as typeof view} class={`rounded-lg px-4 py-2 text-sm font-semibold capitalize ${view === tab ? "bg-amber-400 text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}>{tab}</button>{/each}</div>
       <div class="flex gap-2"><input aria-label="Search vehicles" placeholder="Search trucks..." bind:value={search} class="min-w-0 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm outline-none focus:border-amber-400" /><select aria-label="Sort vehicles" bind:value={sort} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="rank">Rank</option><option value="price">Lowest price</option><option value="year">Newest</option></select></div>
     </div>
-    <div class="mt-5 flex flex-wrap items-center gap-3"><label for="ranking" class="text-sm font-semibold text-zinc-300">Ranking perspective</label><select id="ranking" bind:value={ranking} onchange={() => sort = 'rank'} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="original">Original shortlist</option><option value="long-term">Long-Term Ownership</option></select>{#if ranking === 'long-term'}<span class="text-xs text-zinc-400">Prioritizes ownership beyond a 4–6 year loan; provisional rankings, not confirmed availability.</span>{/if}</div>
+    <div class="mt-5 flex flex-wrap items-center gap-3"><label for="ranking" class="text-sm font-semibold text-zinc-300">Ranking perspective</label><select id="ranking" bind:value={ranking} onchange={() => sort = 'rank'} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="original">Original shortlist</option><option value="long-term">Long-Term Ownership</option></select>{#if ranking === 'long-term'}<span class="text-xs text-zinc-400">Prioritizes ownership beyond a 4–6 year loan. Includes existing watchlist vehicles; higher ranks may cost more, and availability remains unconfirmed.</span>{/if}</div>
     <label class="mt-4 flex items-center gap-2 text-sm text-zinc-400"><input type="checkbox" bind:checked={showUnavailable} /> Show sold and expired historical listings</label>
     <p class="mt-5 text-xs text-zinc-500">Inventory is still being reconciled. Only confirmed rankings are displayed; prices and listing availability should be verified.</p>
     <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
