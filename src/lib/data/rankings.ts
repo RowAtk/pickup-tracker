@@ -27,7 +27,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-top-2019",
-        "reason": "Compelling J$4.49M / 51,794-km paper proposition. Pay the premium over the XLT only if condition and odometer history support it; 2027 eligibility is a concern."
+        "reason": "Jusdrive offer reduced to J$4.1M after the user’s October 29 visit; cosmetic condition satisfactory to user. Advertised 51,794 km, service history and mechanical condition still need independent verification; confirm 2019 financing eligibility."
       },
       {
         "id": "dealer-serviced-2529403",
