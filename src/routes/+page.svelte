@@ -3,16 +3,18 @@
   import { afterNavigate, beforeNavigate } from '$app/navigation';
 
   import { vehicles } from '$lib/data/vehicles';
+  import { rankings, rankingById, rankFor, reasonFor, type RankingId } from '$lib/data/rankings';
   import { vehicleImages } from '$lib/data/vehicle-images';
   let view = $state<'all' | 'shortlist' | 'watchlist'>('all');
   let search = $state('');
   let sort = $state<'rank' | 'price' | 'year'>('rank');
-  let ranking = $state<'original' | 'long-term'>('original');
-  const longTermRanks: Record<string, number> = { 'frontier-2023': 1, 'maxus-t60-auto-2026': 2, 'triton-2025': 3, 'dealer-serviced-2529403': 4, 'wildtrak-2021': 5, 'ranger-top-2019': 6, 'frontier-np300-2020-facebook': 7, 'l200-2021-facebook': 8, 'hilux-2021-facebook': 9, 'maxus-2026': 10 };
-  const displayRank = (v: (typeof vehicles)[number]) => ranking === 'long-term' ? longTermRanks[v.id] : v.rank;
+  let ranking = $state<RankingId>('chatgpt');
+  let rankedOnly = $state(false);
+  const displayRank = (v: (typeof vehicles)[number]) => rankFor(v, ranking);
+  let perspective = $derived(rankingById(ranking));
   let showUnavailable = $state(false);
   const money = (n: number) => n ? 'J$' + new Intl.NumberFormat('en-JM').format(n) : 'Price TBD';
-  let visible = $derived(vehicles.filter(v => (showUnavailable || (v.availability !== 'sold' && v.availability !== 'expired')) && (view === 'all' || v.status === view) && (v.title + ' ' + v.notes).toLowerCase().includes(search.toLowerCase())).sort((a,b) => sort === 'price' ? (a.priceJmd || Infinity) - (b.priceJmd || Infinity) : sort === 'year' ? b.year - a.year : (displayRank(a) ?? 99) - (displayRank(b) ?? 99)));
+  let visible = $derived(vehicles.filter(v => (!rankedOnly || displayRank(v) !== undefined) && (showUnavailable || (v.availability !== 'sold' && v.availability !== 'expired')) && (view === 'all' || v.status === view) && (v.title + ' ' + v.notes).toLowerCase().includes(search.toLowerCase())).sort((a,b) => sort === 'price' ? (a.priceJmd || Infinity) - (b.priceJmd || Infinity) : sort === 'year' ? b.year - a.year : (displayRank(a) ?? 99) - (displayRank(b) ?? 99)));
 
   const browsingStateKey = 'pickup-tracker:browsing:v1';
   let restored = $state(false);
@@ -22,7 +24,7 @@
     if (!restored || window.location.pathname !== '/') return;
     try {
       sessionStorage.setItem(browsingStateKey, JSON.stringify({
-        view, search, sort, ranking, showUnavailable, scrollY: window.scrollY
+        view, search, sort, ranking, rankedOnly, showUnavailable, scrollY: window.scrollY
       }));
     } catch {
       // Browsing remains usable when browser storage is unavailable.
@@ -51,7 +53,8 @@
       if (saved.view === 'all' || saved.view === 'shortlist' || saved.view === 'watchlist') view = saved.view;
       if (typeof saved.search === 'string') search = saved.search;
       if (saved.sort === 'rank' || saved.sort === 'price' || saved.sort === 'year') sort = saved.sort;
-      if (saved.ranking === 'original' || saved.ranking === 'long-term') ranking = saved.ranking;
+      if (rankings.some(r => r.id === saved.ranking)) ranking = saved.ranking as RankingId;
+      if (typeof saved.rankedOnly === 'boolean') rankedOnly = saved.rankedOnly;
       if (typeof saved.showUnavailable === 'boolean') showUnavailable = saved.showUnavailable;
       const scrollY = typeof saved.scrollY === 'number' && Number.isFinite(saved.scrollY)
         ? Math.max(0, saved.scrollY) : 0;
@@ -87,9 +90,17 @@
       <div class="flex gap-2">{#each ['all','shortlist','watchlist'] as tab}<button onclick={() => view = tab as typeof view} class={`rounded-lg px-4 py-2 text-sm font-semibold capitalize ${view === tab ? "bg-amber-400 text-zinc-950" : "bg-zinc-800 text-zinc-300"}`}>{tab}</button>{/each}</div>
       <div class="flex gap-2"><input aria-label="Search vehicles" placeholder="Search trucks..." bind:value={search} class="min-w-0 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm outline-none focus:border-amber-400" /><select aria-label="Sort vehicles" bind:value={sort} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="rank">Rank</option><option value="price">Lowest price</option><option value="year">Newest</option></select></div>
     </div>
-    <div class="mt-5 flex flex-wrap items-center gap-3"><label for="ranking" class="text-sm font-semibold text-zinc-300">Ranking perspective</label><select id="ranking" bind:value={ranking} onchange={() => sort = 'rank'} class="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"><option value="original">Original shortlist</option><option value="long-term">Long-Term Ownership</option></select>{#if ranking === 'long-term'}<span class="text-xs text-zinc-400">Prioritizes ownership beyond a 4–6 year loan. Includes existing watchlist vehicles; higher ranks may cost more, and availability remains unconfirmed.</span>{/if}</div>
+    <div class="mt-5 flex flex-wrap items-center gap-3">
+      <label for="ranking" class="text-sm font-semibold text-zinc-300">Ranking perspective</label>
+      <select id="ranking" bind:value={ranking} onchange={() => { sort = 'rank'; view = 'all'; }} class="max-w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm">
+        {#each rankings as option}<option value={option.id}>{option.label}</option>{/each}
+      </select>
+      <label class="flex items-center gap-2 text-sm text-zinc-400"><input type="checkbox" bind:checked={rankedOnly} /> Ranked vehicles only</label>
+    </div>
+    <p class="mt-3 max-w-3xl text-sm text-zinc-400">{perspective.description}</p>
+    {#if ranking === 'gemini' || ranking === 'chatgpt'}<p class="mt-2 max-w-3xl text-xs text-amber-300">Loan corrections: 2021 Wildtrak uses five years in 2026, not six. New Rely and Ranger XL can fit the staff loan-payment target under the supplied terms. Fees, insurance and eligibility still require confirmation.</p>{/if}
     <label class="mt-4 flex items-center gap-2 text-sm text-zinc-400"><input type="checkbox" bind:checked={showUnavailable} /> Show sold and expired historical listings</label>
-    <p class="mt-5 text-xs text-zinc-500">Inventory is still being reconciled. Only confirmed rankings are displayed; prices and listing availability should be verified.</p>
+    <p class="mt-5 text-xs text-zinc-500">Inventory is still being reconciled. Rankings are provisional research opinions; prices and listing availability should be verified.</p>
     <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {#each visible as vehicle (vehicle.id)}
       <article class="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
@@ -97,7 +108,7 @@
         <div class="p-5"><div class="mb-3 flex items-center justify-between"><span class="rounded-md bg-zinc-800 px-2 py-1 text-xs uppercase text-zinc-300">{vehicle.availability === 'sold' ? 'Sold' : vehicle.availability === 'expired' ? 'Expired advert' : vehicle.availability === 'dealer-catalogue' ? 'Dealer catalogue' : 'Availability unconfirmed'}</span>{#if displayRank(vehicle)}<span class="text-sm font-semibold text-amber-400"># {displayRank(vehicle)}</span>{/if}</div>
         <h2 class="text-xl font-bold"><a class="hover:text-amber-400" href={`/vehicles/${vehicle.id}`}>{vehicle.year || 'Year TBD'} {vehicle.title}</a></h2><p class="mt-2 text-2xl font-bold">{money(vehicle.priceJmd)}</p>
         <p class="mt-2 text-sm text-zinc-400">{vehicle.mileageKm ? vehicle.mileageKm.toLocaleString() + ' km' : 'Mileage TBD'} {vehicle.drivetrain ? ' · ' + vehicle.drivetrain : ''} {vehicle.transmission ? ' · ' + vehicle.transmission : ''}</p>
-        {#if vehicle.notes}<p class="mt-4 text-sm leading-relaxed text-zinc-400">{vehicle.notes}</p>{/if}
+        {#if reasonFor(vehicle, ranking) || vehicle.notes}<p class="mt-4 text-sm leading-relaxed text-zinc-400">{reasonFor(vehicle, ranking) || vehicle.notes}</p>{/if}
         <a href={`/vehicles/${vehicle.id}`} class="mt-5 mr-3 inline-block rounded-lg border border-zinc-700 px-4 py-2 text-sm font-semibold text-zinc-200 hover:border-amber-400">Details →</a>
         {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="mt-5 inline-block rounded-lg bg-amber-400 px-4 py-2 text-sm font-bold text-zinc-950 hover:bg-amber-300">{vehicle.sourceKind === 'dealer-catalogue' ? 'Dealer inventory ↗' : 'View listing ↗'}</a>{/if}
         </div>
@@ -108,3 +119,4 @@
   </main>
   <footer class="mx-auto max-w-6xl border-t border-zinc-800 px-5 py-8 text-sm text-zinc-500">Personal research tracker · Verify listing details and availability with sellers.</footer>
 </div>
+
