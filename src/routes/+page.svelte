@@ -8,7 +8,7 @@
   let view = $state<'all' | 'shortlist' | 'watchlist'>('all');
   let search = $state('');
   let sort = $state<'rank' | 'price' | 'year'>('rank');
-  let ranking = $state<RankingId>('chatgpt');
+  let ranking = $state<RankingId>('original');
   let rankedOnly = $state(false);
   const displayRank = (v: (typeof vehicles)[number]) => rankFor(v, ranking);
   let perspective = $derived(rankingById(ranking));
@@ -53,6 +53,7 @@
       if (saved.view === 'all' || saved.view === 'shortlist' || saved.view === 'watchlist') view = saved.view;
       if (typeof saved.search === 'string') search = saved.search;
       if (saved.sort === 'rank' || saved.sort === 'price' || saved.sort === 'year') sort = saved.sort;
+      if (saved.ranking === 'chatgpt') ranking = 'original';
       if (rankings.some(r => r.id === saved.ranking)) ranking = saved.ranking as RankingId;
       if (typeof saved.rankedOnly === 'boolean') rankedOnly = saved.rankedOnly;
       if (typeof saved.showUnavailable === 'boolean') showUnavailable = saved.showUnavailable;
@@ -98,7 +99,7 @@
       <label class="flex items-center gap-2 text-sm text-zinc-400"><input type="checkbox" bind:checked={rankedOnly} /> Ranked vehicles only</label>
     </div>
     <p class="mt-3 max-w-3xl text-sm text-zinc-400">{perspective.description}</p>
-    {#if ranking === 'gemini' || ranking === 'chatgpt'}<p class="mt-2 max-w-3xl text-xs text-amber-300">Loan corrections: 2021 Wildtrak uses five years in 2026, not six. New Rely and Ranger XL can fit the staff loan-payment target under the supplied terms. Fees, insurance and eligibility still require confirmation.</p>{/if}
+    {#if ranking === 'gemini' || ranking === 'original'}<p class="mt-2 max-w-3xl text-xs text-amber-300">Loan corrections: 2021 Wildtrak uses five years in 2026, not six. New Rely and Ranger XL can fit the staff loan-payment target under the supplied terms. Fees, insurance and eligibility still require confirmation.</p>{/if}
     <label class="mt-4 flex items-center gap-2 text-sm text-zinc-400"><input type="checkbox" bind:checked={showUnavailable} /> Show sold and expired historical listings</label>
     <p class="mt-5 text-xs text-zinc-500">Inventory is still being reconciled. Rankings are provisional research opinions; prices and listing availability should be verified.</p>
     <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -119,4 +120,5 @@
   </main>
   <footer class="mx-auto max-w-6xl border-t border-zinc-800 px-5 py-8 text-sm text-zinc-500">Personal research tracker · Verify listing details and availability with sellers.</footer>
 </div>
+
 

@@ -31,12 +31,12 @@
   {#if vehicle}
     <a href="/" class="text-sm text-zinc-400 hover:text-amber-400">← Back to dashboard</a>
     <div class="mt-7 flex flex-wrap items-start justify-between gap-5">
-      <div><p class="mb-2 text-xs font-bold uppercase tracking-widest text-amber-400">{vehicle.status}{vehicle.rank ? ' · Original rank #' + vehicle.rank : ''} · {vehicle.availability === 'sold' ? 'Sold' : vehicle.availability === 'expired' ? 'Expired advertisement' : vehicle.availability === 'dealer-catalogue' ? 'Dealer catalogue' : 'Availability unconfirmed'}</p><h1 class="text-3xl font-bold sm:text-5xl">{vehicle.year || 'Year TBD'} {vehicle.title}</h1><p class="mt-3 text-3xl font-bold">{vehicle.priceJmd ? money(vehicle.priceJmd) : 'Price TBD'}</p></div>
+      <div><p class="mb-2 text-xs font-bold uppercase tracking-widest text-amber-400">{vehicle.status}{vehicle.rank ? ' · Hybrid rank #' + vehicle.rank : ''} · {vehicle.availability === 'sold' ? 'Sold' : vehicle.availability === 'expired' ? 'Expired advertisement' : vehicle.availability === 'dealer-catalogue' ? 'Dealer catalogue' : 'Availability unconfirmed'}</p><h1 class="text-3xl font-bold sm:text-5xl">{vehicle.year || 'Year TBD'} {vehicle.title}</h1><p class="mt-3 text-3xl font-bold">{vehicle.priceJmd ? money(vehicle.priceJmd) : 'Price TBD'}</p></div>
       {#if vehicle.listingUrl}<a href={vehicle.listingUrl} target="_blank" rel="noopener noreferrer" class="rounded-lg bg-amber-400 px-5 py-3 font-semibold text-zinc-950">{vehicle.sourceKind === 'dealer-catalogue' ? 'Dealer inventory ↗' : 'Original listing ↗'}</a>{/if}
     </div>
     <section class="mt-7 rounded-xl border border-zinc-800 bg-zinc-900 p-5" aria-label="Ranking comparison">
       <h2 class="text-lg font-semibold">Ranking comparison</h2>
-      <p class="mt-1 text-xs text-zinc-400">Separate research perspectives; unranked does not mean rejected. Gemini and ChatGPT opinions recorded October 28, 2026.</p>
+      <p class="mt-1 text-xs text-zinc-400">Separate research perspectives; unranked does not mean rejected. Main shortlist combines Gemini’s second opinion with ChatGPT’s corrections, updated October 28, 2026.</p>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         {#each rankings as perspective}
           <div class="rounded-lg border border-zinc-800 p-3">
@@ -71,6 +71,7 @@
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Drivetrain</p><p class="mt-2 text-xl font-semibold">{vehicle.drivetrain ?? 'Unconfirmed'}</p></div>
       <div class="rounded-xl border border-zinc-800 bg-zinc-900 p-5"><p class="text-xs text-zinc-400">Transmission</p><p class="mt-2 text-xl font-semibold">{vehicle.transmission ?? 'Unconfirmed'}</p></div>
     </div>
+    <p class="mt-7 text-xs text-zinc-500">Detailed assessments below retain their earlier comparison references. Current ranking and rationale appear above.</p>
     <div class="mt-8 grid gap-5 md:grid-cols-2">
       {#if assessment}
         <VehicleAssessment {assessment} />
@@ -97,6 +98,7 @@
   {:else}<h1 class="text-2xl font-bold">Vehicle not found</h1><a href="/" class="mt-5 inline-block text-amber-400">Return to dashboard</a>{/if}
   </main>
 </div>
+
 
 
 
