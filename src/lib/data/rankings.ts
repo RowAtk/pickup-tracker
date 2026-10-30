@@ -69,6 +69,10 @@ export const rankings: Perspective[] = [
         "reason": ""
       },
       {
+        "id": "ranger-xlt-2022-2527799",
+        "reason": "Newly discovered 2022 2.2L diesel automatic 4WD with 32,000 km advertised and dealer service claimed. Category shows J$5.6M but individual advert shows J$5.8M; confirm price, records and mechanical condition before promotion beyond watchlist. 8% stress payments are tight."
+      },
+      {
         "id": "dealer-serviced-2529403",
         "reason": ""
       },
@@ -92,11 +96,7 @@ export const rankings: Perspective[] = [
         "id": "hilux-2021-facebook",
         "reason": ""
       },
-      {
-        "id": "maxus-2026",
-        "reason": ""
-      }
-    ]
+     ]
   },
   {
     "id": "gemini",
