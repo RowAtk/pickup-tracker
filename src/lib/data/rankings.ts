@@ -27,7 +27,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-top-2019",
-        "reason": "Jusdrive offer reduced to J$4.1M after the user’s October 29 visit; cosmetic condition satisfactory to user. Advertised 51,794 km, service history and mechanical condition still need independent verification; confirm 2019 financing eligibility."
+        "reason": "NOT RECOMMENDED: user-reported mechanic inspection found probable front-left collision repair evidence and significant transmission delay engaging Drive; mechanic advised walking away. Kept in original rank position for historical continuity, not as a buying option."
       },
       {
         "id": "dealer-serviced-2529403",
@@ -82,7 +82,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-top-2019",
-        "reason": ""
+        "reason": "NOT RECOMMENDED: independent mechanic found front-left repair evidence and significant transmission engagement delay. Preserved in existing order pending ranking overhaul; do not buy."
       },
       {
         "id": "frontier-np300-2020-facebook",
@@ -113,7 +113,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-top-2019",
-        "reason": "Low advertised mileage and J$4.49M asking price; genuine trim, service history and financing eligibility remain provisional."
+        "reason": "NOT RECOMMENDED after user-reported independent inspection: front-left repair evidence and major delay engaging Drive; mechanic advised walking away. Historical ranking retained for comparison."
       },
       {
         "id": "navara-pro4x-2022-2530201",
