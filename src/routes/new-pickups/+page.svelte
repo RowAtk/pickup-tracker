@@ -37,7 +37,7 @@
   </header>
 
   <main class="mx-auto max-w-6xl px-5 py-10 sm:py-12">
-    <p class="mb-3 text-xs font-semibold uppercase tracking-[.25em] text-amber-400">Separate ranking · Approved 2 November 2026</p>
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[.25em] text-amber-400">Separate ranking · Updated 3 November 2026</p>
     <h1 class="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">Brand-new pickups.<br/><span class="text-zinc-500">Long-term ownership first.</span></h1>
     <p class="mt-5 max-w-3xl leading-relaxed text-zinc-400">An independent ranking of 18 new trucks in Jamaica, balancing appearance, long-term reliability, purchase price, local servicing and warranty. The existing used-pickup shortlist, hybrid ranking, Gemini ranking and watchlist are unchanged.</p>
 
@@ -60,7 +60,7 @@
           <span class="rounded-full border border-zinc-700 px-3 py-1.5 text-xs text-zinc-300">{item.label} <strong class="text-amber-400">{item.weight}%</strong></span>
         {/each}
       </div>
-      <p class="mt-3 text-xs leading-relaxed text-zinc-400">Ranks are editorial judgments, not statistically validated reliability scores. The top-ranked Triton has a provisional position until the exact automatic 4WD price is established. No dealer catalogue entry proves available stock.</p>
+      <p class="mt-3 text-xs leading-relaxed text-zinc-400">Ranks are editorial judgments, not statistically validated reliability scores. The top-ranked Triton has a provisional position until the exact automatic 4WD price is established. The Rely remains conditionally ranked #3 pending a road test. No dealer catalogue entry proves available stock.</p>
     </section>
 
     <section class="mt-5 rounded-xl border border-zinc-800 bg-zinc-900 p-5" aria-label="Loan assumptions">
@@ -86,7 +86,7 @@
       </div>
     </section>
 
-    <p class="mt-6 text-xs text-zinc-500">Retail starting prices and planning approximations are mixed: every vehicle is labeled. USD listings use 1 USD ≈ J$158.69 on November 2, 2026. Verify dealer FX, full-duty pricing, your exact trim and on-road quotation before a purchase. Warranty statements are summaries, not contracts.</p>
+    <section class="mt-5 rounded-xl border border-amber-500/30 bg-zinc-900 p-5" aria-label="Important updates"><h2 class="font-bold text-amber-300">November 3 buyer updates</h2><p class="mt-2 text-sm leading-relaxed text-zinc-300"><strong>2027 Hilux:</strong> planning price now J$9.9M starting (buyer-reported Toyota Jamaica figure); this is not a verified quote for diesel 4WD automatic. The separate 2026 Hilux 2.8 line is a previous-generation estimate, not a new 2027 offer.</p><p class="mt-2 text-sm leading-relaxed text-zinc-300"><strong>Rely R8:</strong> still #3 provisionally. Buyer has driven LHD before and would consider it if the ride is excellent. Jamaican steering-wheel position needs confirmation; negative ride feedback is anecdotal, and no official 2027 suspension revision has been verified. Road test required before purchase.</p></section><p class="mt-6 text-xs text-zinc-500">Retail starting prices and planning approximations are mixed: every vehicle is labeled. USD listings use 1 USD ≈ J$158.69 on November 2, 2026. Verify dealer FX, full-duty pricing, your exact trim and on-road quotation before a purchase. Warranty statements are summaries, not contracts.</p>
 
     <div class="mt-5 grid gap-5 lg:grid-cols-2">
       {#each visible as truck (truck.id)}
@@ -106,7 +106,7 @@
           <p class="mt-2 text-sm text-zinc-300"><strong>Long-term outlook:</strong> {truck.ownership}</p>
           <p class="mt-2 text-sm text-zinc-300"><strong>Servicing:</strong> {truck.servicing}</p>
           <p class="mt-2 text-sm text-zinc-300"><strong>Warranty:</strong> {truck.warranty}</p>
-          <p class="mt-3 text-sm text-amber-200"><strong>Check:</strong> {truck.watchout}</p>
+          {#if truck.drivingFit}<p class="mt-3 rounded-lg border border-amber-500/25 bg-zinc-950 px-3 py-3 text-sm leading-relaxed text-zinc-300"><strong class="text-amber-300">Driving fit:</strong> {truck.drivingFit}</p>{/if}<p class="mt-3 text-sm text-amber-200"><strong>Check:</strong> {truck.watchout}</p>
           <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-zinc-800 pt-4">
             <span class="rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-400">{truck.drivetrain}</span>
             <span class="rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-400">{truck.transmission}</span>
@@ -127,5 +127,5 @@
       <a href="/" class="mt-4 inline-block text-sm font-semibold text-amber-400 hover:underline">Return to used rankings and all watchlist entries →</a>
     </section>
   </main>
-  <footer class="mx-auto max-w-6xl border-t border-zinc-800 px-5 py-8 text-sm text-zinc-500">New model comparison, approved 2 November 2026 · Independent of the used pickup rankings · All terms and prices subject to written confirmation</footer>
+  <footer class="mx-auto max-w-6xl border-t border-zinc-800 px-5 py-8 text-sm text-zinc-500">New model comparison, approved 2 November, updated 3 November 2026 · Independent of the used pickup rankings · All terms and prices subject to written confirmation</footer>
 </div>
