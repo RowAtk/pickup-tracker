@@ -1,5 +1,5 @@
 // Independent new-vehicle research ranking. Do not merge with existing used rankings.
-// Order approved 2026-11-02; updated dealer price evidence noted per entry.
+// Order approved 2026-11-02; buyer information and caveats updated 2026-11-03 without changing its ordering.
 // This is a model comparison, not proof that any specific unit is in stock.
 export type NewPickup = {
   id: string;
@@ -18,6 +18,7 @@ export type NewPickup = {
   warranty: string;
   watchout: string;
   provisional?: boolean;
+  drivingFit?: string;
 };
 export const newPickupWeights = [
   { label: 'Long-term reliability', weight: 30 },
@@ -39,39 +40,39 @@ export const newPickups: NewPickup[] = [
     watchout:'Price of the specific automatic 4WD trim could exceed this figure substantially.', provisional:true
   },
   {
-    id:'hilux-24-new', model:'Toyota Hilux 2.4 4WD Automatic', year:2026, rank:2,
-    priceJmd:8490000, priceBasis:'indicative',
-    priceNote:'Approximate planning figure; current exact 4WD automatic dealer quote not independently verified.',
+    id:'hilux-24-new', model:'Toyota Hilux (2027 new generation; entry trim)', year:2027, rank:2,
+    priceJmd:9900000, priceBasis:'indicative',
+    priceNote:'J$9.9M STARTING price reported by buyer from Toyota Jamaica on 2026-11-03; not independently reproduced in the publicly indexed dealer page. Actual 4WD automatic price may be higher. Replaces the outdated J$8.49M planning figure.',
     sourceUrl:'https://toyotajamaica.com/vehicle/hilux-pickup/overview/',
     transmission:'Automatic (quote pending)', drivetrain:'4WD (quote pending)',
-    ownership:'Excellent established mechanical durability and parts ecosystem.',
-    appearance:'Purposeful and understated, particularly in darker colours.',
+    ownership:'Hilux lineage has a strong durability and parts reputation; this newly revised generation does not yet have a decade of its own reliability data.',
+    appearance:'Sharper ninth-generation shape; especially appealing in darker colours.',
     servicing:'Toyota Jamaica dealer workshops plus a broad independent repair ecosystem.',
     warranty:'Dealer warranty terms need written confirmation for selected variant.',
-    watchout:'J$8.49M is a planning estimate, not an offer for an allocated vehicle.', provisional:true
+    watchout:'Starting price and trim are unverified for the exact 2027 diesel 4WD automatic; request a dated full-duty on-road quote. Do not confuse older-generation prices with 2027 models.', drivingFit:'The new-generation suspension and steering may improve daily comfort, but the Jamaican variant should be test-driven.', provisional:true
   },
   {
     id:'rely-r8-new', model:'Rely R8 2.3 Turbo Diesel', year:2027, rank:3,
     priceJmd:6999000, priceBasis:'dealer-starting',
-    priceNote:'Full retail J$6.999M; J$6.65M concession rate is NOT assumed.',
+    priceNote:'J$6.999M is shown on the current main Jamaican retail page; a separate dealer spec-sheet page shows J$6.799M, so obtain a written JMD quote. J$6.65M concession price is NOT assumed.',
     sourceUrl:'https://relyja.com/', transmission:'8-speed automatic', drivetrain:'4WD with low range',
-    ownership:'Excellent value proposition, but model-specific 8–12-year reliability remains unproven.',
+    ownership:'High equipment-per-dollar value, but 8–12-year reliability and real daily-driver comfort remain unproven. Buyer is experienced with LHD, so steering side alone is not a rejection.',
     appearance:'Sleek but muscular; especially compelling with dark/green paint and stock accessories.',
     servicing:'Tyre Warehouse Automotive, Kingston and Montego Bay.',
     warranty:'Advertised 5 years / 200,000 km; 3 years / 42,500 km servicing.',
-    watchout:'Confirm warranty exclusions, stock, service parts and real repair turnaround times.'
+    watchout:'Reported harsh/bouncy ride is anecdotal pending a local test drive. Rumoured 2027 suspension changes have NOT been factory/dealer-confirmed. Jamaican stock steering position also needs VIN/photo confirmation; international R8s appear LHD. Ask for suspension build revision, warranty exclusions, parts and after-sales support in writing.', drivingFit:'Provisional #3, not a purchase endorsement: LHD acceptable to this buyer if the truck drives excellently. Test ride over rough Kingston roads, speed bumps, an incline and at highway speed; check steering, gearbox and suspension rebound.', provisional:true
   },
   {
-    id:'hilux-28-new', model:'Toyota Hilux 2.8 4WD Automatic', year:2026, rank:4,
+    id:'hilux-28-new', model:'Toyota Hilux 2.8 4WD Automatic (previous generation)', year:2026, rank:4,
     priceJmd:9370000, priceBasis:'indicative',
-    priceNote:'Approximate full-duty 2.8L automatic planning price, not a current written local quote.',
+    priceNote:'Older-generation 2026 2.8L planning estimate only (NOT the newly quoted 2027 Hilux). Previous-generation availability and current quote both unverified.',
     sourceUrl:'https://toyotajamaica.com/vehicle/hilux-pickup/overview/',
     transmission:'Automatic (quote pending)', drivetrain:'4WD (quote pending)',
     ownership:'Strong long-term durability, but the price premium over 2.4L needs justification.',
     appearance:'Rugged Hilux shape, higher trims often look better.',
     servicing:'Toyota Jamaica and extensive aftermarket parts infrastructure.',
     warranty:'Confirm local trim-specific manufacturer warranty.',
-    watchout:'Price/trim and diesel emissions specification need confirmation.', provisional:true
+    watchout:'Do NOT mistake this outgoing-generation 2026 pricing estimate for the 2027 Hilux. Verify that 2026 stock still exists, price, trim and diesel emissions specification.', provisional:true
   },
   {
     id:'dmax-30-new', model:'Isuzu D-Max 3.0', year:2026, rank:5,
