@@ -70,7 +70,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-xlt-2022-2527799",
-        "reason": "Newly discovered 2022 2.2L diesel automatic 4WD with 32,000 km advertised and dealer service claimed. Category shows J$5.6M but individual advert shows J$5.8M; confirm price, records and mechanical condition before promotion beyond watchlist. 8% stress payments are tight."
+        "reason": "2022 2.2L diesel automatic 4WD with 32,000 km advertised. Individual JaCars ad 2527799 shows J$5.6M (previous J$5.8M discrepancy resolved; rechecked Nov 13, 2026). Seller claims dealer servicing but written service records, VIN, accident history and mechanical condition remain unverified. At J$1.2M down over 72 months, estimated loan-only payment is around J$66.9k at 3% and J$77.1k at 8%; the stress scenario exceeds the J$75k ceiling. Keep ranking unchanged until inspection and eligibility are confirmed."
       },
       {
         "id": "dealer-serviced-2529403",
