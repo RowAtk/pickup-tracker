@@ -77,7 +77,7 @@
 </script>
 <svelte:head><title>Pickup Tracker | Jamaica</title><meta name="description" content="Pickup truck shortlist, watchlist and purchase research." /></svelte:head>
 <div class="min-h-screen bg-zinc-950 text-zinc-100">
-  <header class="border-b border-zinc-800/80"><div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5"><a href="/" class="text-xl font-bold tracking-tight">PICKUP<span class="text-amber-400">/</span>TRACKER</a><div class="flex flex-wrap items-center gap-3"><a href="/new-pickups" class="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-zinc-950 hover:bg-amber-300">New pickup ranking →</a><span class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400">Jamaica · Vehicle hunt</span></div></div></header>
+  <header class="border-b border-zinc-800/80"><div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5"><a href="/" class="text-xl font-bold tracking-tight">PICKUP<span class="text-amber-400">/</span>TRACKER</a><div class="flex flex-wrap items-center gap-3"><a href="/tyres" class="rounded-lg border border-zinc-700 px-3 py-2 text-xs font-bold text-amber-400 hover:border-amber-400">Tyre shortlist →</a><a href="/new-pickups" class="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-zinc-950 hover:bg-amber-300">New pickup ranking →</a><span class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400">Jamaica · Vehicle hunt</span></div></div></header>
   <main class="mx-auto max-w-6xl px-5 py-12">
     <p class="mb-3 text-xs font-semibold uppercase tracking-[.25em] text-amber-400">The search for the right truck</p>
     <h1 class="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">Every contender.<br/><span class="text-zinc-500">One place.</span></h1>
