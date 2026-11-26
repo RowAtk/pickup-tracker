@@ -31,11 +31,11 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "dealer-serviced-2529403",
-        "reason": "J$5.2M alternative if the servicing claim is documented. The newer J$5.5M Frontier has much lower advertised mileage."
+        "reason": "J$5.2M alternative if the servicing claim is documented. The newer J$5.5M Frontier has much lower advertised mileage. Individual JaCars advertisement explicitly expired November 26, 2026; historical rank retained, not a current purchase recommendation unless freshly re-listed or seller-confirmed."
       },
       {
         "id": "navara-pro4x-2022-2530201",
-        "reason": "Worth inspecting, but J$6M and modifications need justification. Differential-lock equipment alone does not earn priority for a paved hill commute."
+        "reason": "Worth inspecting, but J$6M and modifications need justification. Differential-lock equipment alone does not earn priority for a paved hill commute. Individual JaCars advertisement explicitly expired November 26, 2026; historical rank retained, not a current purchase recommendation unless freshly re-listed or seller-confirmed."
       },
       {
         "id": "triton-2025",
@@ -74,7 +74,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "dealer-serviced-2529403",
-        "reason": ""
+        "reason": "Individual JaCars advertisement explicitly expired November 26, 2026; historical rank retained, not a current purchase recommendation unless freshly re-listed or seller-confirmed."
       },
       {
         "id": "wildtrak-2021",
@@ -117,7 +117,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "navara-pro4x-2022-2530201",
-        "reason": "Gemini values its advertised equipment and low displayed mileage. Exact trim, engine and gear count are not established."
+        "reason": "Gemini values its advertised equipment and low displayed mileage. Exact trim, engine and gear count are not established. Individual JaCars advertisement explicitly expired November 26, 2026; historical rank retained, not a current purchase recommendation unless freshly re-listed or seller-confirmed."
       },
       {
         "id": "ranger-2019-2529367",
@@ -129,7 +129,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "dealer-serviced-2529403",
-        "reason": "Mid-price alternative whose dealer-servicing claim needs actual records."
+        "reason": "Mid-price alternative whose dealer-servicing claim needs actual records. Individual JaCars advertisement explicitly expired November 26, 2026; historical rank retained, not a current purchase recommendation unless freshly re-listed or seller-confirmed."
       },
       {
         "id": "frontier-np300-2020-facebook",
