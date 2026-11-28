@@ -23,7 +23,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-2019-2529367",
-        "reason": "Budget alternative at J$3.8M, with an established model/service route. Higher mileage needs records and a repair reserve; confirm 2019 loan eligibility before committing."
+        "reason": "Budget alternative at J$3.8M, with an established model/service route. Higher mileage needs records and a repair reserve; confirm 2019 loan eligibility before committing. Nov 28: current ad mileage field is an implausible 1 km; retain historical 130,109 km from seller photo sheet until independently verified."
       },
       {
         "id": "ranger-top-2019",
@@ -121,7 +121,7 @@ export const rankings: Perspective[] = [
       },
       {
         "id": "ranger-2019-2529367",
-        "reason": "Lower-price established-model option; 130,109 km and missing service documentation require a repair reserve."
+        "reason": "Lower-price established-model option; Historical seller photo sheet shows 130,109 km; current ad displays an implausible 1 km. Missing service documentation requires a repair reserve."
       },
       {
         "id": "gwm-pseries-2023-2514157",
